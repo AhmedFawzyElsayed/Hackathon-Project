@@ -1,0 +1,8 @@
+# Install the root requirements.txt first (rag_core's dependencies), then this:
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+python-dotenv
+pytest
+httpx

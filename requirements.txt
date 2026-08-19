@@ -1,0 +1,17 @@
+# Dependencies for rag_core/ and the notebook. Install this first, then
+# backend/requirements.txt for the API layer.
+langchain-community
+langchain-text-splitters
+langchain-chroma
+langchain-core
+chromadb
+pypdf
+scikit-learn
+pandas
+numpy
+rank_bm25
+groq
+sentence-transformers
+torch
+transformers
+python-dotenv

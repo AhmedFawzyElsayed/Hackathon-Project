@@ -1,0 +1,26 @@
+# --- Python ---------------------------------------------------------------
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+
+# --- Node / frontend --------------------------------------------------------
+node_modules/
+dist/
+frontend/dist/
+
+# --- Secrets ----------------------------------------------------------------
+.env
+backend/.env
+frontend/.env
+
+# --- Build artifacts (rebuildable — see rag_core/build_index.py) ------------
+index_store/
+
+# --- Source PDF (large; you may not have redistribution rights) -------------
+*.pdf
+
+# --- Logs / misc --------------------------------------------------------------
+*.log
+.DS_Store
+final_configuration.txt

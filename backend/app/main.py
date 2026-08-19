@@ -1,0 +1,34 @@
+from contextlib import asynccontextmanager
+
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
+from app.api.routes.chat import router as chat_router
+from app.core.config import settings
+from rag_core import load_index
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Load the persisted index once at startup — never per-request. If
+    # index_store/ doesn't exist yet, log it and let requests fail with a
+    # clear 503 rather than crashing the whole app on boot.
+    try:
+        load_index()
+        print("rag_core index loaded.")
+    except FileNotFoundError as e:
+        print(f"WARNING: {e}")
+    yield
+
+
+app = FastAPI(title="Clinical RAG Assistant API", lifespan=lifespan)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=settings.cors_allow_origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+app.include_router(chat_router)
