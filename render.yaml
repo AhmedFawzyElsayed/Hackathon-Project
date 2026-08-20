@@ -1,0 +1,23 @@
+# Render Blueprint — deploys the backend Docker image (the full RAG stack).
+# Connect your repo on https://render.com and pick "Blueprint" or use the
+# dashboard: New + > Web Service > select repo > Docker runtime.
+services:
+  - type: web
+    name: bytecode-backend
+    runtime: docker
+    repo: https://github.com/AhmedFawzyElsayed/Hackathon-Project
+    branch: master
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    # Free plan sleeps after 15 min idle (~1-2 min cold start). Use the paid
+    # Starter plan ($7/mo) if you need it always-on.
+    plan: free
+    envVars:
+      - key: PORT
+        value: 8000
+      # Optional: enables LLM answers instead of extractive mode.
+      - key: GROQ_API_KEY
+        sync: false
+      # Must match the Vercel frontend domain, e.g. ["https://yourapp.vercel.app"]
+      - key: CORS_ALLOW_ORIGINS
+        sync: false

@@ -1,2 +1,0 @@
-# The Vercel function is a stdlib-only stub (no third-party deps needed).
-# The full RAG stack runs on Railway via the root Dockerfile.

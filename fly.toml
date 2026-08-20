@@ -1,0 +1,29 @@
+# Fly.io config — alternative to Render. Deploy with:
+#   flyctl auth login
+#   fly launch --no-deploy   (then edit this file if needed)
+#   fly deploy
+# Memory: use `fly scale memory 4096` (BGE-M3 needs ~2GB+).
+app = "bytecode-backend"
+primary_region = "fra"
+
+build = { dockerfile = "Dockerfile" }
+
+[env]
+  PORT = "8080"
+  # GROQ_API_KEY optional (enables LLM answers)
+  # CORS_ALLOW_ORIGINS = '["https://yourapp.vercel.app"]'
+
+[[services]]
+  http_checks = [{ interval = "30s", grace_period = "300s", path = "/health" }]
+
+  [services.concurrency]
+    type = "connections"
+    hard_limit = 50
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = 80
+
+  [[services.ports]]
+    handlers = ["tls"]
+    port = 443
