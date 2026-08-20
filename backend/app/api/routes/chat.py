@@ -17,7 +17,6 @@ def ask(request: AskRequest):
     if not question:
         raise HTTPException(status_code=422, detail="question must not be empty")
     try:
-        return rag_service.ask(question)
+        return rag_service.ask(question, conversation_id=request.conversation_id)
     except FileNotFoundError as e:
-        # Index artifacts missing — a config problem, not a bad request.
         raise HTTPException(status_code=503, detail=str(e)) from e

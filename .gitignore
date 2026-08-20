@@ -16,6 +16,13 @@ frontend/.env
 
 # --- Build artifacts (rebuildable — see rag_core/build_index.py) ------------
 index_store/
+index_store_old_*/
+
+# --- TypeScript build info ----------------------------------------------------
+*.tsbuildinfo
+
+# --- Scratch inspection scripts ------------------------------------------------
+_inspect*.py
 
 # --- Source PDF (large; you may not have redistribution rights) -------------
 *.pdf

@@ -16,6 +16,13 @@ export interface Claim {
   citation: Citation | null;
 }
 
+export interface GenerationMetrics {
+  faithfulness: number;
+  answer_relevance: number;
+  hallucination_rate: number;
+  context_utilization: number;
+}
+
 export interface AskResponse {
   status: AnswerStatus;
   answer_summary: string;
@@ -23,4 +30,6 @@ export interface AskResponse {
   citation_coverage: number;
   unverified_citations: string[];
   confidence_label: string;
+  conversation_id: string;
+  metrics: GenerationMetrics;
 }

@@ -3,6 +3,7 @@ from pydantic import BaseModel
 
 class AskRequest(BaseModel):
     question: str
+    conversation_id: str | None = None
 
 
 class Citation(BaseModel):
@@ -17,6 +18,13 @@ class Claim(BaseModel):
     citation: Citation | None
 
 
+class GenerationMetrics(BaseModel):
+    faithfulness: float
+    answer_relevance: float
+    hallucination_rate: float
+    context_utilization: float
+
+
 class AskResponse(BaseModel):
     status: str
     answer_summary: str
@@ -24,6 +32,8 @@ class AskResponse(BaseModel):
     citation_coverage: float
     unverified_citations: list[str]
     confidence_label: str
+    conversation_id: str
+    metrics: GenerationMetrics
 
 
 class HealthResponse(BaseModel):

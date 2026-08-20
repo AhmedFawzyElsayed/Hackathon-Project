@@ -113,7 +113,32 @@ RERANK_BLEND_WEIGHT = 0.15  # weight given to the fused/boosted score; cross-enc
 # ---------------------------------------------------------------------------
 # Confidence / grounding
 # ---------------------------------------------------------------------------
-CONFIDENCE_THRESHOLD = float(os.environ.get("RAG_CONFIDENCE_THRESHOLD", 0.0))
+# Bug 3 fix (notebook Section 15): calibrated on the RAW MedCPT-Cross-Encoder
+# top-1 logit against the chosen custom_900_175 chunk config. Max out-of-scope
+# raw CE is 6.33 (Q92 lung cancer), min in-scope non-glossary is 6.84 (Q168
+# USANZ), so 6.5 cleanly separates the two. Glossary-hit definitional answers
+# are exempt (validated by the authoritative-glossary floor below).
+CONFIDENCE_THRESHOLD = float(os.environ.get("RAG_CONFIDENCE_THRESHOLD", 6.5))
+
+# Definitional answers whose top chunk is the p.11 abbreviations list get a
+# confidence floor: the glossary table scores poorly on the cross-encoder
+# (raw CE ~5-9, sometimes negative) despite being ground truth.
+GLOSSARY_HIT_CONFIDENCE_FLOOR = float(
+    os.environ.get("RAG_GLOSSARY_HIT_CONFIDENCE_FLOOR", 5.0)
+)
+
+# Bug 1 fix (notebook Section 7): glossary chunks on definitional queries get
+# this RRF multiplier so they survive into the rerank pool (the old additive
+# boost_weight*section_boost = +0.02 on scores ~0.03 was a no-op).
+DEFINITIONAL_FRONT_MATTER_BOOST = float(
+    os.environ.get("RAG_DEFINITIONAL_FRONT_MATTER_BOOST", 6.0)
+)
+
+# Bug 2 fix (notebook Task 9-10): raw cross-encoder score floor below which an
+# evidence chunk is treated as irrelevant and dropped from extractive claims.
+EVIDENCE_RELEVANCE_THRESHOLD = float(
+    os.environ.get("RAG_EVIDENCE_RELEVANCE_THRESHOLD", 0.5)
+)
 
 # ---------------------------------------------------------------------------
 # Models

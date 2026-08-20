@@ -1,13 +1,14 @@
 import { useState } from "react";
-import type { FormEvent } from "react";
+import type { ChangeEvent, FormEvent } from "react";
 
 interface ChatInputProps {
+  value: string;
+  onChange: (value: string) => void;
   onSubmit: (question: string) => void;
   isLoading: boolean;
 }
 
-export default function ChatInput({ onSubmit, isLoading }: ChatInputProps) {
-  const [value, setValue] = useState("");
+export default function ChatInput({ value, onChange, onSubmit, isLoading }: ChatInputProps) {
   const [validationError, setValidationError] = useState<string | null>(null);
 
   function handleSubmit(e: FormEvent) {
@@ -19,29 +20,37 @@ export default function ChatInput({ onSubmit, isLoading }: ChatInputProps) {
     }
     setValidationError(null);
     onSubmit(trimmed);
-    setValue("");
+    onChange("");
+  }
+
+  function handleChange(e: ChangeEvent<HTMLInputElement>) {
+    onChange(e.target.value);
+    if (validationError) setValidationError(null);
   }
 
   return (
-    <form className="chat-form" onSubmit={handleSubmit}>
-      <div className="chat-form__row">
+    <>
+      <form className="chat-input" onSubmit={handleSubmit}>
+        <button type="button" className="attach-btn" aria-label="Attach file" onClick={() => {}}>
+          <i className="fa-solid fa-paperclip"></i>
+        </button>
+
         <input
-          className="chat-form__input"
           type="text"
           value={value}
-          onChange={(e) => {
-            setValue(e.target.value);
-            if (validationError) setValidationError(null);
-          }}
-          placeholder="Ask about the early-detection guideline…"
+          onChange={handleChange}
+          placeholder="Ask ByteCode anything..."
           disabled={isLoading}
           aria-label="Question for the guideline assistant"
         />
-        <button className="chat-form__submit" type="submit" disabled={isLoading}>
-          {isLoading ? "Asking…" : "Ask"}
+
+        <button className="send-btn" type="submit" disabled={isLoading}>
+          <span>{isLoading ? "Asking…" : "Send"}</span>
+          <i className="fa-solid fa-arrow-up"></i>
         </button>
-      </div>
-      {validationError && <p className="chat-form__error">{validationError}</p>}
-    </form>
+      </form>
+
+      {validationError && <p className="chat-error">{validationError}</p>}
+    </>
   );
 }

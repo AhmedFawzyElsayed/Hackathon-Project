@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import "./App.css";
-import { ApiError, askQuestion } from "./api/chatClient";
+import { ApiError, askQuestion, resetConversation } from "./api/chatClient";
 import AnswerCard from "./components/AnswerCard";
 import ChatInput from "./components/ChatInput";
 import RefusalCard from "./components/RefusalCard";
@@ -14,9 +14,33 @@ interface Turn {
   error: string | null;
 }
 
+const SUGGESTED_QUESTIONS = [
+  {
+    icon: "fa-solid fa-database",
+    tag: "Question 01",
+    text: "What does PSAD stand for and why is it used?",
+  },
+  {
+    icon: "fa-solid fa-chart-column",
+    tag: "Question 02",
+    text: "What PSA threshold triggers a repeat test?",
+  },
+  {
+    icon: "fa-solid fa-code",
+    tag: "Question 03",
+    text: "What information is available in the guideline?",
+  },
+  {
+    icon: "fa-solid fa-lightbulb",
+    tag: "Question 04",
+    text: "What are the most important insights from the guideline?",
+  },
+];
+
 export default function App() {
   const [turns, setTurns] = useState<Turn[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [inputValue, setInputValue] = useState("");
 
   async function handleAsk(question: string) {
     const id = Date.now();
@@ -34,46 +58,177 @@ export default function App() {
     }
   }
 
+  function handleSuggested(question: string) {
+    setInputValue(question);
+    handleAsk(question);
+  }
+
+  function handleNewConversation() {
+    resetConversation();
+    setTurns([]);
+    setInputValue("");
+  }
+
+  const historyTitle = turns.length > 0 ? turns[0].question : "";
+
   return (
-    <div className="page">
-      <header className="masthead">
-        <p className="masthead__eyebrow">PCFA-EDPC-2026-001 · retrieval-augmented</p>
-        <h1 className="masthead__title">Clinical RAG Assistant</h1>
-        <p className="masthead__subtitle">
-          Answers grounded in the 2026 prostate cancer early-detection guideline. Every claim
-          traces to a cited section and page — questions about your own results are declined,
-          not guessed at.
-        </p>
-      </header>
+    <div className="app">
+      {/* ================= SIDEBAR ================= */}
+      <aside className="sidebar">
+        <div className="sidebar-header">
+          <div className="sidebar-logo">
+            <span>&lt;/&gt;</span>
+            ByteCode
+          </div>
 
-      <div className="thread">
-        <ChatInput onSubmit={handleAsk} isLoading={isLoading} />
+          <button className="new-chat-btn" onClick={handleNewConversation} disabled={isLoading}>
+            <i className="fa-solid fa-plus" />
+            <span>New Chat</span>
+          </button>
+        </div>
 
-        {turns.length === 0 && (
-          <p className="empty-state">Ask something like "What does PSAD stand for?" to get started.</p>
-        )}
+        <div className="history">
+          <p className="history-title">CHAT HISTORY</p>
 
-        {turns
-          .slice()
-          .reverse()
-          .map((turn) => (
-            <div key={turn.id} className="question-log">
-              <span className="question-log__label">You asked</span>
-              <span>{turn.question}</span>
-
-              {turn.error && <p className="chat-form__error">{turn.error}</p>}
-
-              {!turn.error && !turn.result && <p className="loading-line">Retrieving and grounding an answer…</p>}
-
-              {turn.result &&
-                (turn.result.status === "answered" ? (
-                  <AnswerCard result={turn.result} />
-                ) : (
-                  <RefusalCard result={turn.result} />
-                ))}
+          {historyTitle && (
+            <div className="chat-item active">
+              <i className="fa-regular fa-message" />
+              <span>{historyTitle}</span>
             </div>
-          ))}
-      </div>
+          )}
+        </div>
+
+        <div className="sidebar-footer">
+          <button className="sidebar-action" onClick={() => {}}>
+            <i className="fa-solid fa-gear" />
+            <span>Settings</span>
+          </button>
+        </div>
+      </aside>
+
+      {/* ================= MAIN ================= */}
+      <main className="main-content">
+        <section className="hero">
+          <div className="ascii-logo">
+            <span className="logo-bracket">[</span>
+            <span className="logo-text">ByteCode</span>
+            <span className="logo-bracket">]</span>
+          </div>
+
+          <p className="subtitle">Ask questions and explore your data with AI.</p>
+        </section>
+
+        <section className="suggested-section">
+          <div className="section-heading">
+            <div>
+              <h2>Suggested Questions</h2>
+              <p>Explore the knowledge available in ByteCode.</p>
+            </div>
+          </div>
+
+          <div className="suggested-grid">
+            {SUGGESTED_QUESTIONS.map((q, i) => (
+              <button
+                key={i}
+                className="question-card"
+                onClick={() => handleSuggested(q.text)}
+                disabled={isLoading}
+              >
+                <div className="question-icon">
+                  <i className={q.icon} />
+                </div>
+
+                <div className="question-content">
+                  <span>{q.tag}</span>
+                  <p>{q.text}</p>
+                </div>
+
+                <i className="fa-solid fa-arrow-up-right-from-square arrow" />
+              </button>
+            ))}
+          </div>
+        </section>
+
+        <section className="conversation">
+          <div className="conversation-header">
+            <div>
+              <span className="status-dot"></span>
+              <span>BYTECODE AI</span>
+            </div>
+
+            <button className="clear-chat" onClick={handleNewConversation} disabled={isLoading}>
+              <i className="fa-solid fa-trash"></i>
+              Clear
+            </button>
+          </div>
+
+          {turns.length === 0 ? (
+            <div className="empty-chat">
+              <div className="empty-icon">
+                <i className="fa-solid fa-sparkles"></i>
+              </div>
+
+              <h3>Start a conversation</h3>
+
+              <p>
+                Choose a suggested question or ask ByteCode anything about the
+                available knowledge.
+              </p>
+            </div>
+          ) : (
+            turns.map((turn) => (
+              <div key={turn.id} className="turn">
+                <div className="message user-message">{turn.question}</div>
+
+                {turn.error ? (
+                  <div className="message ai-message">
+                    <div className="ai-label">
+                      <span className="status-dot"></span>
+                      BYTECODE
+                    </div>
+                    <p className="answer-error">{turn.error}</p>
+                  </div>
+                ) : !turn.result ? (
+                  <div className="message ai-message">
+                    <div className="ai-label">
+                      <span className="status-dot"></span>
+                      BYTECODE
+                    </div>
+                    <p className="loading-line">Retrieving and grounding an answer…</p>
+                  </div>
+                ) : turn.result.status === "answered" ? (
+                  <div className="message ai-message">
+                    <div className="ai-label">
+                      <span className="status-dot"></span>
+                      BYTECODE
+                    </div>
+                    <AnswerCard result={turn.result} />
+                  </div>
+                ) : (
+                  <div className="message ai-message">
+                    <div className="ai-label">
+                      <span className="status-dot"></span>
+                      BYTECODE
+                    </div>
+                    <RefusalCard result={turn.result} />
+                  </div>
+                )}
+              </div>
+            ))
+          )}
+        </section>
+
+        <div className="chat-input-wrapper">
+          <ChatInput
+            value={inputValue}
+            onChange={setInputValue}
+            onSubmit={handleAsk}
+            isLoading={isLoading}
+          />
+
+          <p className="input-note">ByteCode can make mistakes. Verify important information.</p>
+        </div>
+      </main>
     </div>
   );
 }

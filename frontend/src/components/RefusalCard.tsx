@@ -13,14 +13,12 @@ export default function RefusalCard({ result }: RefusalCardProps) {
   const meta = COPY[result.status] ?? { label: result.status, modifier: "insufficient" };
 
   return (
-    <div className={`result-card result-card--${meta.modifier}`}>
-      <div className="result-card__bar" />
-      <div className="result-card__body">
-        <div className="result-card__status-row">
-          <span className={`status-badge status-badge--${meta.modifier}`}>{meta.label}</span>
-        </div>
-        <p className="result-card__summary">{result.answer_summary}</p>
+    <div className="answer-content">
+      <div className="answer-status-row">
+        <span className={`status-badge status-badge--${meta.modifier}`}>{meta.label}</span>
       </div>
+
+      <p className="answer-summary">{result.answer_summary}</p>
     </div>
   );
 }

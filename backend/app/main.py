@@ -1,4 +1,12 @@
+import sys
 from contextlib import asynccontextmanager
+from pathlib import Path
+
+# The project root lives one level above backend/, and rag_core lives there.
+# Add it so `from rag_core import ...` resolves regardless of CWD.
+_PROJECT_ROOT = str(Path(__file__).resolve().parent.parent.parent)
+if _PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, _PROJECT_ROOT)
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware

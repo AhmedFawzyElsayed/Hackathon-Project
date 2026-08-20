@@ -1,0 +1,2804 @@
+[
+  {
+    "id": 1,
+    "type": "Direct",
+    "question": "What family-history patterns make a male higher risk for prostate cancer mortality for PSA testing?",
+    "expected_pages": [
+      27,
+      51,
+      69
+    ],
+    "expected_section": "Section A: Risk assessment",
+    "expected_evidence": "Family-history criteria used to define higher risk.",
+    "expected_answer_keywords": [
+      "brother",
+      "father",
+      "65",
+      "second-degree",
+      "relatives"
+    ]
+  },
+  {
+    "id": 2,
+    "type": "Direct",
+    "question": "What does the guideline recommend about digital rectal examination in the primary care setting?",
+    "expected_pages": [
+      78,
+      79
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "DRE is not recommended as a routine addition to PSA testing and risk assessment in primary care.",
+    "expected_answer_keywords": [
+      "not recommended",
+      "routine",
+      "DRE",
+      "digital rectal"
+    ]
+  },
+  {
+    "id": 3,
+    "type": "Direct",
+    "question": "For males needing further investigation because of PSA, what is the recommended next diagnostic test?",
+    "expected_pages": [
+      103
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "mpMRI is recommended as the next diagnostic test to determine whether biopsy is indicated.",
+    "expected_answer_keywords": [
+      "mpMRI",
+      "MRI",
+      "biopsy"
+    ]
+  },
+  {
+    "id": 4,
+    "type": "Direct",
+    "question": "What biopsy approach is preferred for early detection of prostate cancer?",
+    "expected_pages": [
+      140
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Ultrasound-guided transperineal biopsy is preferred.",
+    "expected_answer_keywords": [
+      "transperineal",
+      "ultrasound-guided",
+      "biopsy"
+    ]
+  },
+  {
+    "id": 5,
+    "type": "Direct",
+    "question": "At what age should discussion about prostate cancer risk factors and PSA testing begin for most males?",
+    "expected_pages": [
+      85
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "For males aged 50 years and over, initiate a discussion about risk factors and benefits and harms of testing.",
+    "expected_answer_keywords": [
+      "50",
+      "risk factors",
+      "benefits",
+      "harms",
+      "testing"
+    ]
+  },
+  {
+    "id": 6,
+    "type": "Direct",
+    "question": "What PSA testing interval is recommended for males aged 50 to 69 who decide to undergo testing?",
+    "expected_pages": [
+      85
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "PSA testing every two years is suggested.",
+    "expected_answer_keywords": [
+      "every two years",
+      "2 years",
+      "50",
+      "69"
+    ]
+  },
+  {
+    "id": 7,
+    "type": "Direct",
+    "question": "What should happen when total PSA is 3.0 micrograms per litre or greater in males aged 50 to 69?",
+    "expected_pages": [
+      85
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Repeat PSA within 1-3 months and, if confirmed, offer referral for further investigation.",
+    "expected_answer_keywords": [
+      "3.0",
+      "repeat",
+      "1-3 months",
+      "referral"
+    ]
+  },
+  {
+    "id": 8,
+    "type": "Direct",
+    "question": "Which males are considered to be at higher risk of prostate cancer according to the guideline?",
+    "expected_pages": [
+      85
+    ],
+    "expected_section": "Section A: Risk assessment",
+    "expected_evidence": "Higher-risk groups include males with significant family history, Black males of sub-Saharan African ancestry, and males with BRCA2 mutations.",
+    "expected_answer_keywords": [
+      "family history",
+      "Black",
+      "sub-Saharan African",
+      "BRCA2"
+    ]
+  },
+  {
+    "id": 9,
+    "type": "Direct",
+    "question": "What is the definition of active surveillance in the guideline?",
+    "expected_pages": [
+      141
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "Active surveillance is a monitoring strategy for clinically localised prostate cancer intended to minimise treatment-related toxicity without compromising survival.",
+    "expected_answer_keywords": [
+      "monitoring",
+      "localised",
+      "toxicity",
+      "survival"
+    ]
+  },
+  {
+    "id": 10,
+    "type": "Direct",
+    "question": "What PSA, clinical stage, PI-RADS, and PSA density criteria are used when considering active surveillance?",
+    "expected_pages": [
+      141
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "PSA <10, clinical stage T1-T2a, PI-RADS 3 or less, and PSAD 0.15 or less.",
+    "expected_answer_keywords": [
+      "PSA <10",
+      "T1-T2a",
+      "PI-RADS 3",
+      "0.15"
+    ]
+  },
+  {
+    "id": 11,
+    "type": "Direct",
+    "question": "Which ISUP Grade Group is offered active surveillance when the eligibility criteria are met?",
+    "expected_pages": [
+      141
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "Active surveillance is offered to patients with ISUP Grade Group 1.",
+    "expected_answer_keywords": [
+      "ISUP",
+      "Grade Group 1"
+    ]
+  },
+  {
+    "id": 12,
+    "type": "Direct",
+    "question": "When may active surveillance be considered for ISUP Grade Group 2 disease?",
+    "expected_pages": [
+      141
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "It may be considered when there is less than or equal to 10% Gleason pattern 4.",
+    "expected_answer_keywords": [
+      "Grade Group 2",
+      "10%",
+      "Gleason pattern 4"
+    ]
+  },
+  {
+    "id": 13,
+    "type": "Direct",
+    "question": "For a PI-RADS 3 mpMRI, what PSA density threshold supports offering prostate biopsy?",
+    "expected_pages": [
+      103,
+      115
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "PSAD of at least 0.15 micrograms per litre per millilitre supports biopsy.",
+    "expected_answer_keywords": [
+      "0.15",
+      "PSAD",
+      "biopsy"
+    ]
+  },
+  {
+    "id": 14,
+    "type": "Direct",
+    "question": "What should happen to males with a moderately elevated PSA?",
+    "expected_pages": [
+      83
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "A repeat PSA after a few weeks should be considered to confirm the indication for further diagnostic analysis.",
+    "expected_answer_keywords": [
+      "repeat PSA",
+      "few weeks",
+      "confirm"
+    ]
+  },
+  {
+    "id": 15,
+    "type": "Direct",
+    "question": "What factors can cause PSA levels to vary independently of prostate cancer?",
+    "expected_pages": [
+      83
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Biological variation, urinary tract infection, acute urinary retention, hypogonadism, obesity, procedures, medications, and measurement factors can affect PSA.",
+    "expected_answer_keywords": [
+      "infection",
+      "urinary retention",
+      "obesity",
+      "medications",
+      "variation"
+    ]
+  },
+  {
+    "id": 16,
+    "type": "Direct",
+    "question": "How much can 5-alpha reductase inhibitors lower serum PSA levels?",
+    "expected_pages": [
+      83
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "They can lower serum PSA levels by up to 50%.",
+    "expected_answer_keywords": [
+      "50%",
+      "5-alpha reductase inhibitors"
+    ]
+  },
+  {
+    "id": 17,
+    "type": "Direct",
+    "question": "Does digital rectal examination affect PSA levels?",
+    "expected_pages": [
+      83
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Digital rectal examination does not affect PSA levels.",
+    "expected_answer_keywords": [
+      "does not affect",
+      "PSA",
+      "DRE"
+    ]
+  },
+  {
+    "id": 18,
+    "type": "Direct",
+    "question": "Why is mpMRI used before prostate biopsy?",
+    "expected_pages": [
+      84,
+      103
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "mpMRI is used to triage men with elevated PSA and determine who should be offered biopsy.",
+    "expected_answer_keywords": [
+      "mpMRI",
+      "triage",
+      "biopsy"
+    ]
+  },
+  {
+    "id": 19,
+    "type": "Direct",
+    "question": "What PI-RADS categories are considered non-suspicious on mpMRI?",
+    "expected_pages": [
+      128,
+      140
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "PI-RADS 1 and 2 are considered non-suspicious.",
+    "expected_answer_keywords": [
+      "PI-RADS 1",
+      "PI-RADS 2"
+    ]
+  },
+  {
+    "id": 20,
+    "type": "Direct",
+    "question": "When can systematic biopsy still be performed despite a non-suspicious mpMRI?",
+    "expected_pages": [
+      140
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "It may still be performed when there is clinical concern such as suspicious DRE or high risk of clinically significant prostate cancer.",
+    "expected_answer_keywords": [
+      "systematic biopsy",
+      "clinical concern",
+      "DRE",
+      "high risk"
+    ]
+  },
+  {
+    "id": 21,
+    "type": "Direct",
+    "question": "What biopsy technique is preferred because it has a lower risk of post-biopsy infection?",
+    "expected_pages": [
+      140
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Ultrasound-guided transperineal biopsy is preferred.",
+    "expected_answer_keywords": [
+      "transperineal",
+      "infection"
+    ]
+  },
+  {
+    "id": 22,
+    "type": "Direct",
+    "question": "How many cores should generally be obtained for targeted prostate biopsy?",
+    "expected_pages": [
+      140
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "The optimal number of targeted biopsy cores should be at least 3-4.",
+    "expected_answer_keywords": [
+      "3-4",
+      "targeted",
+      "cores"
+    ]
+  },
+  {
+    "id": 23,
+    "type": "Direct",
+    "question": "What should be considered before performing a prostate biopsy for early detection?",
+    "expected_pages": [
+      140
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "A urological consultation should generally occur and may include history, discussion of benefits and harms, examination, PSA testing and mpMRI.",
+    "expected_answer_keywords": [
+      "urological consultation",
+      "history",
+      "PSA",
+      "mpMRI"
+    ]
+  },
+  {
+    "id": 24,
+    "type": "Direct",
+    "question": "What are the potential complications associated with prostate biopsy?",
+    "expected_pages": [
+      129
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Potential complications include infection, bleeding, and adverse reactions to anaesthesia.",
+    "expected_answer_keywords": [
+      "infection",
+      "bleeding",
+      "anaesthesia"
+    ]
+  },
+  {
+    "id": 25,
+    "type": "Direct",
+    "question": "What is the purpose of active surveillance for men with localised prostate cancer?",
+    "expected_pages": [
+      141
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "To minimise treatment-related toxicity without compromising survival by achieving appropriate timing for curative treatment.",
+    "expected_answer_keywords": [
+      "minimise",
+      "toxicity",
+      "survival",
+      "curative treatment"
+    ]
+  },
+  {
+    "id": 26,
+    "type": "Paraphrased",
+    "question": "Which relatives or family patterns can move a person into the higher-risk PSA testing group?",
+    "expected_pages": [
+      27,
+      51,
+      69
+    ],
+    "expected_section": "Section A: Risk assessment",
+    "expected_evidence": "Brother diagnosed, father diagnosed before 65, or two or more second-degree relatives with relevant prostate cancer history.",
+    "expected_answer_keywords": [
+      "brother",
+      "father",
+      "65",
+      "second-degree"
+    ]
+  },
+  {
+    "id": 27,
+    "type": "Paraphrased",
+    "question": "After PSA suggests further investigation, what imaging step comes before deciding on biopsy?",
+    "expected_pages": [
+      103
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "mpMRI is used to triage men for biopsy.",
+    "expected_answer_keywords": [
+      "mpMRI",
+      "MRI",
+      "triage"
+    ]
+  },
+  {
+    "id": 28,
+    "type": "Paraphrased",
+    "question": "When might an equivocal prostate MRI result mean that a biopsy can be avoided?",
+    "expected_pages": [
+      115
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "PI-RADS 3 with PSAD below 0.15 may not require biopsy subject to clinical assessment.",
+    "expected_answer_keywords": [
+      "PI-RADS 3",
+      "0.15",
+      "PSAD",
+      "clinical assessment"
+    ]
+  },
+  {
+    "id": 29,
+    "type": "Paraphrased",
+    "question": "What testing schedule should a man aged 50 to 69 follow if he chooses PSA screening?",
+    "expected_pages": [
+      85
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "PSA testing every two years.",
+    "expected_answer_keywords": [
+      "every two years",
+      "50",
+      "69"
+    ]
+  },
+  {
+    "id": 30,
+    "type": "Paraphrased",
+    "question": "What should a man do if his PSA reaches the investigation threshold at ages 50 to 69?",
+    "expected_pages": [
+      85
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Repeat PSA within 1-3 months and refer for further investigation if confirmed.",
+    "expected_answer_keywords": [
+      "repeat",
+      "1-3 months",
+      "referral"
+    ]
+  },
+  {
+    "id": 31,
+    "type": "Paraphrased",
+    "question": "Which men are classified as being at higher risk rather than average risk?",
+    "expected_pages": [
+      85
+    ],
+    "expected_section": "Section A: Risk assessment",
+    "expected_evidence": "Men with significant family history, Black men of sub-Saharan African ancestry, and men with BRCA2 mutations.",
+    "expected_answer_keywords": [
+      "family history",
+      "Black",
+      "BRCA2"
+    ]
+  },
+  {
+    "id": 32,
+    "type": "Paraphrased",
+    "question": "How does the guideline define active surveillance for localised prostate cancer?",
+    "expected_pages": [
+      141
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "Monitoring strategy intended to delay or avoid treatment-related toxicity while maintaining survival.",
+    "expected_answer_keywords": [
+      "monitoring",
+      "localised",
+      "toxicity",
+      "survival"
+    ]
+  },
+  {
+    "id": 33,
+    "type": "Paraphrased",
+    "question": "Which clinical and imaging characteristics make a patient a candidate for active surveillance?",
+    "expected_pages": [
+      141
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "PSA <10, T1-T2a, PI-RADS <=3, and PSAD <=0.15.",
+    "expected_answer_keywords": [
+      "PSA <10",
+      "T1-T2a",
+      "PI-RADS",
+      "0.15"
+    ]
+  },
+  {
+    "id": 34,
+    "type": "Paraphrased",
+    "question": "Which prostate cancer grade is generally suitable for active surveillance when the other criteria are satisfied?",
+    "expected_pages": [
+      141
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "ISUP Grade Group 1.",
+    "expected_answer_keywords": [
+      "Grade Group 1",
+      "ISUP"
+    ]
+  },
+  {
+    "id": 35,
+    "type": "Paraphrased",
+    "question": "When can a patient with Grade Group 2 prostate cancer still be considered for surveillance?",
+    "expected_pages": [
+      141
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "When Gleason pattern 4 is 10% or less and other criteria are satisfied.",
+    "expected_answer_keywords": [
+      "Grade Group 2",
+      "10%",
+      "pattern 4"
+    ]
+  },
+  {
+    "id": 36,
+    "type": "Paraphrased",
+    "question": "Why might PSA need to be repeated after a moderately elevated result?",
+    "expected_pages": [
+      83
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "PSA can fluctuate and a repeat measurement can confirm whether further diagnostic assessment is indicated.",
+    "expected_answer_keywords": [
+      "repeat",
+      "PSA",
+      "fluctuate",
+      "confirm"
+    ]
+  },
+  {
+    "id": 37,
+    "type": "Paraphrased",
+    "question": "Which non-cancerous conditions can make PSA appear elevated?",
+    "expected_pages": [
+      83
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Benign prostatic hyperplasia, prostatitis, urinary tract infection, and acute urinary retention can increase PSA.",
+    "expected_answer_keywords": [
+      "BPH",
+      "prostatitis",
+      "infection",
+      "retention"
+    ]
+  },
+  {
+    "id": 38,
+    "type": "Paraphrased",
+    "question": "How can obesity affect PSA concentration?",
+    "expected_pages": [
+      83
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Serum PSA concentrations are reduced in the presence of obesity.",
+    "expected_answer_keywords": [
+      "obesity",
+      "reduced",
+      "PSA"
+    ]
+  },
+  {
+    "id": 39,
+    "type": "Paraphrased",
+    "question": "What medication can substantially reduce a measured PSA result?",
+    "expected_pages": [
+      83
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "5-alpha reductase inhibitors can lower serum PSA by up to 50%.",
+    "expected_answer_keywords": [
+      "5-alpha reductase",
+      "50%"
+    ]
+  },
+  {
+    "id": 40,
+    "type": "Paraphrased",
+    "question": "Why is MRI now an important part of the prostate cancer diagnostic pathway?",
+    "expected_pages": [
+      84,
+      103
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "mpMRI is used before biopsy to triage patients and reduce unnecessary biopsies.",
+    "expected_answer_keywords": [
+      "mpMRI",
+      "triage",
+      "biopsy"
+    ]
+  },
+  {
+    "id": 41,
+    "type": "Paraphrased",
+    "question": "What does a PI-RADS score of 1 or 2 generally indicate?",
+    "expected_pages": [
+      128,
+      140
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "The MRI is not suspicious of prostate cancer.",
+    "expected_answer_keywords": [
+      "PI-RADS 1",
+      "PI-RADS 2",
+      "not suspicious"
+    ]
+  },
+  {
+    "id": 42,
+    "type": "Paraphrased",
+    "question": "Can a patient with a non-suspicious MRI still undergo prostate biopsy?",
+    "expected_pages": [
+      140
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Yes, systematic biopsy may still be performed if there is clinical concern such as suspicious DRE or high cancer risk.",
+    "expected_answer_keywords": [
+      "yes",
+      "systematic biopsy",
+      "clinical concern",
+      "high risk"
+    ]
+  },
+  {
+    "id": 43,
+    "type": "Paraphrased",
+    "question": "Why does the guideline prefer the transperineal route for prostate biopsy?",
+    "expected_pages": [
+      140
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "It has a lower risk of post-biopsy infection and facilitates accurate targeting.",
+    "expected_answer_keywords": [
+      "transperineal",
+      "infection",
+      "target"
+    ]
+  },
+  {
+    "id": 44,
+    "type": "Paraphrased",
+    "question": "How many samples should generally be taken from a targeted lesion?",
+    "expected_pages": [
+      140
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "At least 3-4 targeted biopsy cores.",
+    "expected_answer_keywords": [
+      "3-4",
+      "cores"
+    ]
+  },
+  {
+    "id": 45,
+    "type": "Paraphrased",
+    "question": "What consultation should usually occur before a prostate biopsy?",
+    "expected_pages": [
+      140
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "A urological consultation including relevant history, benefits and harms, examination, PSA and mpMRI.",
+    "expected_answer_keywords": [
+      "urological consultation",
+      "history",
+      "PSA",
+      "mpMRI"
+    ]
+  },
+  {
+    "id": 46,
+    "type": "Paraphrased",
+    "question": "What is the main goal of active surveillance instead of immediate treatment?",
+    "expected_pages": [
+      141
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "Minimise treatment-related toxicity while preserving survival and allowing curative treatment when needed.",
+    "expected_answer_keywords": [
+      "toxicity",
+      "survival",
+      "curative"
+    ]
+  },
+  {
+    "id": 47,
+    "type": "Paraphrased",
+    "question": "Which high-risk ancestry group is specifically identified in the guideline?",
+    "expected_pages": [
+      85,
+      69
+    ],
+    "expected_section": "Section A: Risk assessment",
+    "expected_evidence": "Black males of sub-Saharan African ancestry.",
+    "expected_answer_keywords": [
+      "Black",
+      "sub-Saharan African"
+    ]
+  },
+  {
+    "id": 48,
+    "type": "Paraphrased",
+    "question": "Which genetic mutation is explicitly associated with higher prostate cancer risk?",
+    "expected_pages": [
+      85,
+      71
+    ],
+    "expected_section": "Section A: Risk assessment",
+    "expected_evidence": "BRCA2 mutation.",
+    "expected_answer_keywords": [
+      "BRCA2",
+      "mutation"
+    ]
+  },
+  {
+    "id": 49,
+    "type": "Paraphrased",
+    "question": "What should happen when a benign prostate biopsy result is obtained?",
+    "expected_pages": [
+      140
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Subsequent management varies according to risk profile and may include resuming PSA testing, repeat imaging, or repeat biopsy.",
+    "expected_answer_keywords": [
+      "benign",
+      "risk profile",
+      "PSA",
+      "repeat imaging",
+      "repeat biopsy"
+    ]
+  },
+  {
+    "id": 50,
+    "type": "Paraphrased",
+    "question": "What does the guideline say about the number of systematic biopsy cores and complications?",
+    "expected_pages": [
+      140
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "More systematic cores increase detection but may also increase complications such as bleeding, urinary retention, erectile dysfunction and infection.",
+    "expected_answer_keywords": [
+      "systematic",
+      "cores",
+      "bleeding",
+      "retention",
+      "infection"
+    ]
+  },
+  {
+    "id": 51,
+    "type": "Abbreviation",
+    "question": "What does PSA stand for?",
+    "expected_pages": [
+      11
+    ],
+    "expected_section": "List of abbreviations",
+    "expected_evidence": "Prostate specific antigen.",
+    "expected_answer_keywords": [
+      "prostate specific antigen"
+    ]
+  },
+  {
+    "id": 52,
+    "type": "Abbreviation",
+    "question": "What does PSAD stand for?",
+    "expected_pages": [
+      11
+    ],
+    "expected_section": "List of abbreviations",
+    "expected_evidence": "Prostate specific antigen density.",
+    "expected_answer_keywords": [
+      "prostate specific antigen density"
+    ]
+  },
+  {
+    "id": 53,
+    "type": "Abbreviation",
+    "question": "What does mpMRI stand for?",
+    "expected_pages": [
+      11,
+      84
+    ],
+    "expected_section": "List of abbreviations",
+    "expected_evidence": "Multiparametric magnetic resonance imaging.",
+    "expected_answer_keywords": [
+      "multiparametric magnetic resonance imaging"
+    ]
+  },
+  {
+    "id": 54,
+    "type": "Abbreviation",
+    "question": "What does MRI stand for?",
+    "expected_pages": [
+      11
+    ],
+    "expected_section": "List of abbreviations",
+    "expected_evidence": "Magnetic resonance imaging.",
+    "expected_answer_keywords": [
+      "magnetic resonance imaging"
+    ]
+  },
+  {
+    "id": 55,
+    "type": "Abbreviation",
+    "question": "What does DRE stand for?",
+    "expected_pages": [
+      11,
+      78
+    ],
+    "expected_section": "List of abbreviations",
+    "expected_evidence": "Digital rectal examination.",
+    "expected_answer_keywords": [
+      "digital rectal examination"
+    ]
+  },
+  {
+    "id": 56,
+    "type": "Abbreviation",
+    "question": "What does PI-RADS stand for?",
+    "expected_pages": [
+      11,
+      103
+    ],
+    "expected_section": "List of abbreviations",
+    "expected_evidence": "Prostate Imaging Reporting and Data System.",
+    "expected_answer_keywords": [
+      "Prostate Imaging Reporting and Data System"
+    ]
+  },
+  {
+    "id": 57,
+    "type": "Abbreviation",
+    "question": "What does ISUP stand for?",
+    "expected_pages": [
+      11,
+      141
+    ],
+    "expected_section": "List of abbreviations",
+    "expected_evidence": "International Society of Urological Pathology.",
+    "expected_answer_keywords": [
+      "International Society of Urological Pathology"
+    ]
+  },
+  {
+    "id": 58,
+    "type": "Abbreviation",
+    "question": "What does RCT stand for?",
+    "expected_pages": [
+      11,
+      86
+    ],
+    "expected_section": "List of abbreviations",
+    "expected_evidence": "Randomised controlled trial.",
+    "expected_answer_keywords": [
+      "randomised controlled trial"
+    ]
+  },
+  {
+    "id": 59,
+    "type": "Abbreviation",
+    "question": "What does ERSPC stand for?",
+    "expected_pages": [
+      86,
+      89
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "European Randomised Study of Screening for Prostate Cancer.",
+    "expected_answer_keywords": [
+      "European Randomised Study",
+      "Screening",
+      "Prostate Cancer"
+    ]
+  },
+  {
+    "id": 60,
+    "type": "Abbreviation",
+    "question": "What does PLCO stand for?",
+    "expected_pages": [
+      86,
+      89
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Prostate, Lung, Colorectal, and Ovarian Cancer Screening Trial.",
+    "expected_answer_keywords": [
+      "Prostate",
+      "Lung",
+      "Colorectal",
+      "Ovarian"
+    ]
+  },
+  {
+    "id": 61,
+    "type": "Abbreviation",
+    "question": "What does CAP stand for in the PSA screening evidence?",
+    "expected_pages": [
+      86,
+      89
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Cluster Randomised Trial of PSA testing for Prostate Cancer.",
+    "expected_answer_keywords": [
+      "Cluster Randomised Trial",
+      "PSA",
+      "Prostate Cancer"
+    ]
+  },
+  {
+    "id": 62,
+    "type": "Abbreviation",
+    "question": "What does GRADE stand for in the evidence assessment framework?",
+    "expected_pages": [
+      22,
+      87
+    ],
+    "expected_section": "Guideline methodology",
+    "expected_evidence": "Grading of Recommendations Assessment, Development and Evaluation.",
+    "expected_answer_keywords": [
+      "Grading",
+      "Recommendations",
+      "Assessment",
+      "Development",
+      "Evaluation"
+    ]
+  },
+  {
+    "id": 63,
+    "type": "Abbreviation",
+    "question": "What does PICO stand for in a clinical question?",
+    "expected_pages": [
+      89,
+      128
+    ],
+    "expected_section": "Guideline methodology",
+    "expected_evidence": "Population, Intervention, Comparator, Outcome.",
+    "expected_answer_keywords": [
+      "Population",
+      "Intervention",
+      "Comparator",
+      "Outcome"
+    ]
+  },
+  {
+    "id": 64,
+    "type": "Abbreviation",
+    "question": "What does QLQ-C30 refer to in the active-surveillance evidence?",
+    "expected_pages": [
+      147
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "A cancer-related quality-of-life measurement scale used in the evidence.",
+    "expected_answer_keywords": [
+      "quality of life",
+      "QLQ-C30"
+    ]
+  },
+  {
+    "id": 65,
+    "type": "Abbreviation",
+    "question": "What does HADS stand for in the anxiety outcome?",
+    "expected_pages": [
+      147
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "Hospital Anxiety and Depression Scale.",
+    "expected_answer_keywords": [
+      "Hospital Anxiety and Depression Scale"
+    ]
+  },
+  {
+    "id": 66,
+    "type": "Abbreviation",
+    "question": "What does EPIC refer to in the quality-of-life outcomes?",
+    "expected_pages": [
+      145,
+      146
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "Expanded Prostate Cancer Index Composite.",
+    "expected_answer_keywords": [
+      "Expanded Prostate Cancer Index Composite",
+      "EPIC"
+    ]
+  },
+  {
+    "id": 67,
+    "type": "Abbreviation",
+    "question": "What does BRCA2 refer to in prostate cancer risk assessment?",
+    "expected_pages": [
+      85,
+      71
+    ],
+    "expected_section": "Section A: Risk assessment",
+    "expected_evidence": "A BRCA2 mutation is identified as a higher-risk factor.",
+    "expected_answer_keywords": [
+      "BRCA2",
+      "mutation",
+      "higher risk"
+    ]
+  },
+  {
+    "id": 68,
+    "type": "Abbreviation",
+    "question": "What does MCID mean in the evidence-to-decision framework?",
+    "expected_pages": [
+      86,
+      147
+    ],
+    "expected_section": "Guideline methodology",
+    "expected_evidence": "Minimal clinically important difference.",
+    "expected_answer_keywords": [
+      "minimal clinically important difference"
+    ]
+  },
+  {
+    "id": 69,
+    "type": "Abbreviation",
+    "question": "What does PCOR-ANZ refer to in the guideline?",
+    "expected_pages": [
+      87
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "Prostate Cancer Outcomes Registry Australia and New Zealand.",
+    "expected_answer_keywords": [
+      "Prostate Cancer Outcomes Registry",
+      "Australia",
+      "New Zealand"
+    ]
+  },
+  {
+    "id": 70,
+    "type": "Abbreviation",
+    "question": "What does PSA density refer to when abbreviated as PSAD?",
+    "expected_pages": [
+      11,
+      115,
+      141
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "PSAD is prostate specific antigen density, used with prostate volume to assess risk.",
+    "expected_answer_keywords": [
+      "PSA density",
+      "prostate specific antigen density"
+    ]
+  },
+  {
+    "id": 71,
+    "type": "Threshold",
+    "question": "For interested males aged 45 to 49 who are not at higher risk, what PSA value leads to repeating the test within 1-3 months?",
+    "expected_pages": [
+      29,
+      31,
+      33
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Total PSA of 1.0 micrograms per litre or greater.",
+    "expected_answer_keywords": [
+      "1.0",
+      "1 microgram"
+    ]
+  },
+  {
+    "id": 72,
+    "type": "Threshold",
+    "question": "For males aged 50 to 69 who are not at higher risk, what PSA value leads to repeating the test within 1-3 months?",
+    "expected_pages": [
+      30,
+      32
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Total PSA of 3 micrograms per litre or greater.",
+    "expected_answer_keywords": [
+      "3 micrograms",
+      "3.0"
+    ]
+  },
+  {
+    "id": 73,
+    "type": "Threshold",
+    "question": "For males aged 70 years and over who choose testing, what PSA value leads to repeating the test within 1-3 months?",
+    "expected_pages": [
+      31,
+      33
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Total PSA of 5.5 micrograms per litre or greater.",
+    "expected_answer_keywords": [
+      "5.5"
+    ]
+  },
+  {
+    "id": 74,
+    "type": "Threshold",
+    "question": "For a PI-RADS 3 mpMRI, what PSA density threshold supports offering prostate biopsy?",
+    "expected_pages": [
+      103,
+      115
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "PSAD of at least 0.15 micrograms per litre per millilitre.",
+    "expected_answer_keywords": [
+      "0.15",
+      "PSAD"
+    ]
+  },
+  {
+    "id": 75,
+    "type": "Threshold",
+    "question": "What PSA threshold is recommended for routine testing in males aged 50 to 69?",
+    "expected_pages": [
+      85
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "A total PSA of 3.0 micrograms per litre or greater triggers repeat testing and further investigation if confirmed.",
+    "expected_answer_keywords": [
+      "3.0",
+      "50",
+      "69"
+    ]
+  },
+  {
+    "id": 76,
+    "type": "Threshold",
+    "question": "What age range is covered by the routine PSA testing recommendation for males who choose testing?",
+    "expected_pages": [
+      85
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Males aged 50-69.",
+    "expected_answer_keywords": [
+      "50",
+      "69"
+    ]
+  },
+  {
+    "id": 77,
+    "type": "Threshold",
+    "question": "How frequently should PSA testing be performed for males aged 50 to 69 who elect testing?",
+    "expected_pages": [
+      85
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Every two years.",
+    "expected_answer_keywords": [
+      "two years",
+      "2 years"
+    ]
+  },
+  {
+    "id": 78,
+    "type": "Threshold",
+    "question": "How soon should PSA be repeated when the relevant PSA threshold has been reached?",
+    "expected_pages": [
+      85
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Within 1-3 months.",
+    "expected_answer_keywords": [
+      "1-3 months"
+    ]
+  },
+  {
+    "id": 79,
+    "type": "Threshold",
+    "question": "What PSA level is used as the threshold for repeating testing in men aged 70 years and over?",
+    "expected_pages": [
+      31,
+      33
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "5.5 micrograms per litre.",
+    "expected_answer_keywords": [
+      "5.5"
+    ]
+  },
+  {
+    "id": 80,
+    "type": "Threshold",
+    "question": "What PSA density value is used to distinguish lower and higher biopsy risk for PI-RADS 3 lesions?",
+    "expected_pages": [
+      103,
+      115
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "0.15 micrograms per litre per millilitre.",
+    "expected_answer_keywords": [
+      "0.15",
+      "PSAD"
+    ]
+  },
+  {
+    "id": 81,
+    "type": "Threshold",
+    "question": "What PSA level is used in the active-surveillance eligibility criteria?",
+    "expected_pages": [
+      141
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "PSA less than 10 micrograms per litre.",
+    "expected_answer_keywords": [
+      "10",
+      "PSA",
+      "<10"
+    ]
+  },
+  {
+    "id": 82,
+    "type": "Threshold",
+    "question": "What PSA density level is used in the active-surveillance eligibility criteria?",
+    "expected_pages": [
+      141
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "PSAD of 0.15 micrograms per litre per millilitre or less.",
+    "expected_answer_keywords": [
+      "0.15",
+      "PSAD",
+      "less"
+    ]
+  },
+  {
+    "id": 83,
+    "type": "Threshold",
+    "question": "What maximum Gleason pattern 4 percentage is specified when considering active surveillance for Grade Group 2?",
+    "expected_pages": [
+      141
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "Less than or equal to 10% Gleason pattern 4.",
+    "expected_answer_keywords": [
+      "10%",
+      "Gleason pattern 4"
+    ]
+  },
+  {
+    "id": 84,
+    "type": "Threshold",
+    "question": "What clinical stages are included in the standard active-surveillance eligibility criteria?",
+    "expected_pages": [
+      141
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "Clinical stage T1-T2a.",
+    "expected_answer_keywords": [
+      "T1",
+      "T2a"
+    ]
+  },
+  {
+    "id": 85,
+    "type": "Threshold",
+    "question": "What is the maximum PI-RADS score included in the standard active-surveillance criteria?",
+    "expected_pages": [
+      141
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "PI-RADS 3 or less.",
+    "expected_answer_keywords": [
+      "PI-RADS 3",
+      "less"
+    ]
+  },
+  {
+    "id": 86,
+    "type": "Threshold",
+    "question": "How many targeted biopsy cores are recommended at minimum?",
+    "expected_pages": [
+      140
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "At least 3-4 cores.",
+    "expected_answer_keywords": [
+      "3-4"
+    ]
+  },
+  {
+    "id": 87,
+    "type": "Threshold",
+    "question": "By approximately what percentage can mpMRI triage reduce unnecessary prostate biopsies?",
+    "expected_pages": [
+      87
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Approximately 50%.",
+    "expected_answer_keywords": [
+      "50%",
+      "50"
+    ]
+  },
+  {
+    "id": 88,
+    "type": "Threshold",
+    "question": "By what percentage range can mpMRI triage reduce detection of low-risk disease?",
+    "expected_pages": [
+      87
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Between 32% and 64%.",
+    "expected_answer_keywords": [
+      "32%",
+      "64%"
+    ]
+  },
+  {
+    "id": 89,
+    "type": "Threshold",
+    "question": "What proportion of patients with low-risk prostate cancer were managed with active surveillance in Australia and New Zealand in 2021?",
+    "expected_pages": [
+      87
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "80% of patients with low-risk disease were managed with active surveillance.",
+    "expected_answer_keywords": [
+      "80%",
+      "2021",
+      "active surveillance"
+    ]
+  },
+  {
+    "id": 90,
+    "type": "Threshold",
+    "question": "What proportion of patients with low-risk disease were managed with active surveillance in 2015?",
+    "expected_pages": [
+      87
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "66% in 2015.",
+    "expected_answer_keywords": [
+      "66%",
+      "2015"
+    ]
+  },
+  {
+    "id": 91,
+    "type": "Out-of-scope",
+    "question": "What is the recommended treatment for type 2 diabetes?",
+    "expected_pages": [],
+    "expected_section": "",
+    "expected_evidence": "No evidence expected in the prostate guideline. The system should not invent an answer.",
+    "expected_answer_keywords": []
+  },
+  {
+    "id": 92,
+    "type": "Out-of-scope",
+    "question": "What is the recommended treatment for lung cancer?",
+    "expected_pages": [],
+    "expected_section": "",
+    "expected_evidence": "No evidence expected in the prostate guideline. The system should not invent an answer.",
+    "expected_answer_keywords": []
+  },
+  {
+    "id": 93,
+    "type": "Out-of-scope",
+    "question": "What medication is recommended for rheumatoid arthritis?",
+    "expected_pages": [],
+    "expected_section": "",
+    "expected_evidence": "No evidence expected in the prostate guideline.",
+    "expected_answer_keywords": []
+  },
+  {
+    "id": 94,
+    "type": "Out-of-scope",
+    "question": "What is the recommended diet for patients with chronic kidney disease?",
+    "expected_pages": [],
+    "expected_section": "",
+    "expected_evidence": "No evidence expected in the prostate guideline.",
+    "expected_answer_keywords": []
+  },
+  {
+    "id": 95,
+    "type": "Out-of-scope",
+    "question": "What is the recommended treatment for breast cancer?",
+    "expected_pages": [],
+    "expected_section": "",
+    "expected_evidence": "No evidence expected in the prostate guideline.",
+    "expected_answer_keywords": []
+  },
+  {
+    "id": 96,
+    "type": "Out-of-scope",
+    "question": "What are the diagnostic criteria for Alzheimer's disease?",
+    "expected_pages": [],
+    "expected_section": "",
+    "expected_evidence": "No evidence expected in the prostate guideline.",
+    "expected_answer_keywords": []
+  },
+  {
+    "id": 97,
+    "type": "Out-of-scope",
+    "question": "What antibiotics are recommended for bacterial pneumonia?",
+    "expected_pages": [],
+    "expected_section": "",
+    "expected_evidence": "No evidence expected in the prostate guideline.",
+    "expected_answer_keywords": []
+  },
+  {
+    "id": 98,
+    "type": "Out-of-scope",
+    "question": "What is the recommended management of hypertension?",
+    "expected_pages": [],
+    "expected_section": "",
+    "expected_evidence": "No evidence expected in the prostate guideline.",
+    "expected_answer_keywords": []
+  },
+  {
+    "id": 99,
+    "type": "Out-of-scope",
+    "question": "What is the recommended treatment for asthma?",
+    "expected_pages": [],
+    "expected_section": "",
+    "expected_evidence": "No evidence expected in the prostate guideline.",
+    "expected_answer_keywords": []
+  },
+  {
+    "id": 100,
+    "type": "Out-of-scope",
+    "question": "What is the recommended treatment for migraine?",
+    "expected_pages": [],
+    "expected_section": "",
+    "expected_evidence": "No evidence expected in the prostate guideline.",
+    "expected_answer_keywords": []
+  },
+  {
+    "id": 101,
+    "type": "Direct",
+    "question": "What year was the previous version of the Australian guidelines for prostate cancer published?",
+    "expected_pages": [
+      21
+    ],
+    "expected_section": "Executive Summary",
+    "expected_evidence": "A detailed summary of Guideline changes from 2016 to 2026 is presented...",
+    "expected_answer_keywords": [
+      "2016"
+    ]
+  },
+  {
+    "id": 102,
+    "type": "Direct",
+    "question": "Are Aboriginal and Torres Strait Islander males considered a priority population?",
+    "expected_pages": [
+      28
+    ],
+    "expected_section": "Section C: Priority populations",
+    "expected_evidence": "Aboriginal and Torres Strait Islander males are considered a priority population...",
+    "expected_answer_keywords": [
+      "Yes",
+      "priority population"
+    ]
+  },
+  {
+    "id": 103,
+    "type": "Direct",
+    "question": "What is the suggested PSA testing interval for Aboriginal and Torres Strait Islander males aged 50 to 69?",
+    "expected_pages": [
+      30
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "We suggest offering PSA testing every two years to Aboriginal and Torres Strait Islander males aged 50 to 69 years...",
+    "expected_answer_keywords": [
+      "every two years",
+      "2 years"
+    ]
+  },
+  {
+    "id": 104,
+    "type": "Direct",
+    "question": "What is the life expectancy threshold below which PSA testing is not recommended?",
+    "expected_pages": [
+      30,
+      31
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Testing is not recommended if life expectancy is 7 years or less.",
+    "expected_answer_keywords": [
+      "7 years or less",
+      "7 years"
+    ]
+  },
+  {
+    "id": 105,
+    "type": "Direct",
+    "question": "By what percentage can mpMRI triage reduce unnecessary prostate biopsies?",
+    "expected_pages": [
+      87
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Using multiparametric MRI to triage men... will reduce the number of unnecessary biopsies by approximately 50%",
+    "expected_answer_keywords": [
+      "approximately 50%",
+      "50%"
+    ]
+  },
+  {
+    "id": 106,
+    "type": "Direct",
+    "question": "For men with an mpMRI score 4-5, how many cores are recommended for targeted biopsy?",
+    "expected_pages": [
+      140
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "The optimal number of cores for targeted biopsy should be at least 3-4.",
+    "expected_answer_keywords": [
+      "at least 3-4",
+      "3-4 cores"
+    ]
+  },
+  {
+    "id": 107,
+    "type": "Direct",
+    "question": "Active surveillance is not advised for patients with which histologic features?",
+    "expected_pages": [
+      141
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "Variant histology (sarcomatoid, small cell, cribriform) and features including intraduct, extra-prostatic extension, lymphovascular invasion and perineural invasion.",
+    "expected_answer_keywords": [
+      "intraduct",
+      "extra-prostatic extension",
+      "lymphovascular invasion",
+      "perineural invasion",
+      "variant histology"
+    ]
+  },
+  {
+    "id": 108,
+    "type": "Direct",
+    "question": "What was the hazard ratio for metastatic disease at 15 years for active surveillance compared to immediate prostatectomy in the ProtecT trial?",
+    "expected_pages": [
+      145
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "Hazard ratio 2.13 (CI 95% 1.32 \u2014 3.45)",
+    "expected_answer_keywords": [
+      "2.13"
+    ]
+  },
+  {
+    "id": 109,
+    "type": "Direct",
+    "question": "What framework was used to assess the strength of evidence-based recommendations?",
+    "expected_pages": [
+      22,
+      87
+    ],
+    "expected_section": "Guideline methodology",
+    "expected_evidence": "Grading of Recommendations Assessment, Development and Evaluation (GRADE).",
+    "expected_answer_keywords": [
+      "GRADE",
+      "Grading of Recommendations"
+    ]
+  },
+  {
+    "id": 110,
+    "type": "Direct",
+    "question": "At what age does the AUA guideline recommend offering regular PSA screening to people at average risk?",
+    "expected_pages": [
+      201
+    ],
+    "expected_section": "APPENDIX 4: Comparison of selected international guidelines",
+    "expected_evidence": "Clinicians should offer regular prostate cancer screening every 2 to 4 years to people aged 50 to 69 years.",
+    "expected_answer_keywords": [
+      "50 to 69 years",
+      "50",
+      "69"
+    ]
+  },
+  {
+    "id": 111,
+    "type": "Direct",
+    "question": "What does the EAU guideline recommend for the follow-up interval for men with a PSA >1 ng/mL at 40 years of age?",
+    "expected_pages": [
+      203
+    ],
+    "expected_section": "APPENDIX 4: Comparison of selected international guidelines",
+    "expected_evidence": "Offer a risk-adapted strategy... with follow-up intervals of 2 years for those initially at risk: men with a PSA level of >1 ng/mL at 40 years of age",
+    "expected_answer_keywords": [
+      "2 years"
+    ]
+  },
+  {
+    "id": 112,
+    "type": "Direct",
+    "question": "How is PSA velocity defined in the guidelines?",
+    "expected_pages": [
+      211
+    ],
+    "expected_section": "APPENDIX 6: Glossary of terms",
+    "expected_evidence": "Defined as an absolute annual increase in serum PSA and is expressed as \u03bcg/L /year.",
+    "expected_answer_keywords": [
+      "absolute annual increase",
+      "\u03bcg/L /year"
+    ]
+  },
+  {
+    "id": 113,
+    "type": "Direct",
+    "question": "What approaches can decision support include according to the guidelines?",
+    "expected_pages": [
+      28
+    ],
+    "expected_section": "Section B: Decision support",
+    "expected_evidence": "Informal discussions, in-depth discussions, provision of general written information/decision support tools, referral to digital resources.",
+    "expected_answer_keywords": [
+      "informal discussions",
+      "in-depth discussions",
+      "written information",
+      "digital resources"
+    ]
+  },
+  {
+    "id": 114,
+    "type": "Direct",
+    "question": "What programs facilitate access to specialist diagnostic services for Aboriginal and Torres Strait Islander males?",
+    "expected_pages": [
+      74
+    ],
+    "expected_section": "Section C: Priority populations",
+    "expected_evidence": "Through programs such as the Medical Specialist Outreach Assistance Program (MSOAP), existing telehealth infrastructure, and point of care testing.",
+    "expected_answer_keywords": [
+      "MSOAP",
+      "telehealth",
+      "point of care testing"
+    ]
+  },
+  {
+    "id": 115,
+    "type": "Direct",
+    "question": "How does digital rectal examination affect PSA levels?",
+    "expected_pages": [
+      83
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Digital rectal examination does not affect PSA levels.",
+    "expected_answer_keywords": [
+      "does not affect",
+      "PSA levels"
+    ]
+  },
+  {
+    "id": 116,
+    "type": "Direct",
+    "question": "What is the relative risk of prostate cancer for men with BRCA2 mutations at age 55 or under?",
+    "expected_pages": [
+      71
+    ],
+    "expected_section": "Section A: Risk assessment",
+    "expected_evidence": "Relative risk 8 to 23 prostate cancer at 55 years or under",
+    "expected_answer_keywords": [
+      "8 to 23"
+    ]
+  },
+  {
+    "id": 117,
+    "type": "Direct",
+    "question": "Does the AIHW data show that Aboriginal and Torres Strait Islander males have a higher or lower incidence rate of prostate cancer compared to non-Indigenous males?",
+    "expected_pages": [
+      198
+    ],
+    "expected_section": "Appendix 3: Literature reviews",
+    "expected_evidence": "Rates are generally lower than in non-Indigenous males, except for the 75 and over age group",
+    "expected_answer_keywords": [
+      "lower",
+      "except 75 and over"
+    ]
+  },
+  {
+    "id": 118,
+    "type": "Direct",
+    "question": "What is the main intention of watchful waiting according to the guidelines?",
+    "expected_pages": [
+      173
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "The aim is to maximise the patient\u2019s quality of life in alignment with their initial and evolving stated goals of care.",
+    "expected_answer_keywords": [
+      "maximise",
+      "quality of life",
+      "goals of care"
+    ]
+  },
+  {
+    "id": 119,
+    "type": "Direct",
+    "question": "Which organisation provides full funding for military veterans diagnosed with prostate cancer under the NLHC program?",
+    "expected_pages": [
+      197
+    ],
+    "expected_section": "Appendix 3: Literature reviews",
+    "expected_evidence": "In Australia, the Department of Veterans Affairs provides full funding for military veterans...",
+    "expected_answer_keywords": [
+      "Department of Veterans Affairs",
+      "DVA"
+    ]
+  },
+  {
+    "id": 120,
+    "type": "Direct",
+    "question": "What is the definition of Gleason score?",
+    "expected_pages": [
+      210
+    ],
+    "expected_section": "APPENDIX 6: Glossary of terms",
+    "expected_evidence": "The Gleason score is given as two numbers added together to give a score out of 10",
+    "expected_answer_keywords": [
+      "two numbers added",
+      "score out of 10",
+      "most common tissue patterns"
+    ]
+  },
+  {
+    "id": 121,
+    "type": "Direct",
+    "question": "At what age does the NCCN guideline suggest considering baseline PSA for average risk patients?",
+    "expected_pages": [
+      201
+    ],
+    "expected_section": "APPENDIX 4: Comparison of selected international guidelines",
+    "expected_evidence": "Age 45\u201375 years for patients with average risk.",
+    "expected_answer_keywords": [
+      "45\u201375",
+      "45 to 75"
+    ]
+  },
+  {
+    "id": 122,
+    "type": "Direct",
+    "question": "At what PSA level should a man aged 45-49 not at higher risk repeat the test within 1-3 months?",
+    "expected_pages": [
+      31
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "if total PSA is 1.0 \u03bcg/L or greater repeat the test within 1-3 months",
+    "expected_answer_keywords": [
+      "1.0",
+      "1.0 \u03bcg/L or greater"
+    ]
+  },
+  {
+    "id": 123,
+    "type": "Direct",
+    "question": "What does the CHAMP study indicate about PSA testing rates among Australian-born men compared to migrants?",
+    "expected_pages": [
+      194
+    ],
+    "expected_section": "Appendix 3: Literature reviews",
+    "expected_evidence": "Australian-born men had the highest rate of PSA testing at 53%, compared to those born in Italy...",
+    "expected_answer_keywords": [
+      "highest rate",
+      "53%",
+      "Australian-born"
+    ]
+  },
+  {
+    "id": 124,
+    "type": "Direct",
+    "question": "What is the expected outcome on clinically significant cancer detection if men with a PI-RADS of 1-2 do not undergo biopsy?",
+    "expected_pages": [
+      104
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "the number of undetected ISUP Grade \u2265 2 prostate cancers is likely clinically unimportant.",
+    "expected_answer_keywords": [
+      "clinically unimportant"
+    ]
+  },
+  {
+    "id": 125,
+    "type": "Direct",
+    "question": "Who is the Chair of the Project Steering Committee (PSC) for the 2026 Guidelines?",
+    "expected_pages": [
+      177
+    ],
+    "expected_section": "APPENDIX 1: Governance structure and group membership",
+    "expected_evidence": "Prof. Jeff Dunn AO \u2013 Chair & CI",
+    "expected_answer_keywords": [
+      "Prof. Jeff Dunn AO",
+      "Jeff Dunn"
+    ]
+  },
+  {
+    "id": 126,
+    "type": "Paraphrased",
+    "question": "Who is the target audience for these guidelines?",
+    "expected_pages": [
+      10
+    ],
+    "expected_section": "Terminology",
+    "expected_evidence": "General practitioners and medical specialists.",
+    "expected_answer_keywords": [
+      "General practitioners",
+      "medical specialists",
+      "clinicians"
+    ]
+  },
+  {
+    "id": 127,
+    "type": "Paraphrased",
+    "question": "Does a man with a father diagnosed with prostate cancer at age 70 qualify as higher risk according to the strong recommendation?",
+    "expected_pages": [
+      27
+    ],
+    "expected_section": "Section A: Risk assessment",
+    "expected_evidence": "Strong recommendation requires father diagnosed before age 65. However, conditional recommendation considers diagnosis at any age.",
+    "expected_answer_keywords": [
+      "No",
+      "before 65",
+      "conditional recommendation"
+    ]
+  },
+  {
+    "id": 128,
+    "type": "Paraphrased",
+    "question": "Should transgender women on gender-affirming hormones be evaluated differently for PSA?",
+    "expected_pages": [
+      28
+    ],
+    "expected_section": "Section C: Priority populations",
+    "expected_evidence": "Baseline PSA values for transgender women on gender-affirming hormones may be artificially lower, necessitating extra care.",
+    "expected_answer_keywords": [
+      "Yes",
+      "artificially lower",
+      "extra care"
+    ]
+  },
+  {
+    "id": 129,
+    "type": "Paraphrased",
+    "question": "How does obesity impact a patient's serum PSA?",
+    "expected_pages": [
+      83
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Serum PSA concentrations are reduced in the presence of obesity.",
+    "expected_answer_keywords": [
+      "reduced",
+      "obesity"
+    ]
+  },
+  {
+    "id": 130,
+    "type": "Paraphrased",
+    "question": "Why are Australian Aboriginal and Torres Strait Islander men considered a priority population despite lower incidence?",
+    "expected_pages": [
+      74
+    ],
+    "expected_section": "Section C: Priority populations",
+    "expected_evidence": "Survival outcomes in Aboriginal and Torres Strait Islander males are worse than the general Australian male population.",
+    "expected_answer_keywords": [
+      "worse",
+      "survival outcomes"
+    ]
+  },
+  {
+    "id": 131,
+    "type": "Paraphrased",
+    "question": "In patients with a negative MRI (PI-RADS 1 or 2), under what circumstances might a systematic biopsy still be justified?",
+    "expected_pages": [
+      140
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Systematic biopsies may still be performed if there is clinical concern, such as a suspicious DRE or high risk of clinically significant cancer.",
+    "expected_answer_keywords": [
+      "clinical concern",
+      "suspicious DRE",
+      "high risk"
+    ]
+  },
+  {
+    "id": 132,
+    "type": "Paraphrased",
+    "question": "Can patients with an equivocal MRI score (PI-RADS 3) avoid biopsy entirely?",
+    "expected_pages": [
+      115
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "We suggest that males with an equivocal PI-RADS 3 mpMRI and PSAD < 0.15 \u03bcg/L/mL may not require prostate biopsy subject to clinical assessment.",
+    "expected_answer_keywords": [
+      "Yes",
+      "PSAD < 0.15",
+      "clinical assessment"
+    ]
+  },
+  {
+    "id": 133,
+    "type": "Paraphrased",
+    "question": "What does the ProtecT trial reveal about the long-term impact of active surveillance versus immediate prostatectomy on sexual quality of life?",
+    "expected_pages": [
+      154
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "Active surveillance based only on PSA testing when compared with immediate prostatectomy there was a small (clinically important) increase in sexual quality of life at 2 years.",
+    "expected_answer_keywords": [
+      "small",
+      "increase",
+      "sexual quality of life",
+      "2 years"
+    ]
+  },
+  {
+    "id": 134,
+    "type": "Paraphrased",
+    "question": "Which specific group of firefighters shows an increased risk for prostate cancer?",
+    "expected_pages": [
+      197
+    ],
+    "expected_section": "Appendix 3: Literature reviews",
+    "expected_evidence": "Both full-time and part-time firefighters, with risk increasing for those employed for more than 10 years.",
+    "expected_answer_keywords": [
+      "full-time",
+      "part-time",
+      "more than 10 years"
+    ]
+  },
+  {
+    "id": 135,
+    "type": "Paraphrased",
+    "question": "According to the EAU guidelines, when should PSA testing be stopped based on life expectancy?",
+    "expected_pages": [
+      205
+    ],
+    "expected_section": "APPENDIX 4: Comparison of selected international guidelines",
+    "expected_evidence": "Stop early diagnosis of prostate cancer... Males who have a life-expectancy of less than 15 years are unlikely to benefit.",
+    "expected_answer_keywords": [
+      "less than 15 years"
+    ]
+  },
+  {
+    "id": 136,
+    "type": "Paraphrased",
+    "question": "How is 'clinically significant prostate cancer' defined for the purpose of the technical review in the guideline?",
+    "expected_pages": [
+      26
+    ],
+    "expected_section": "Section A: Risk assessment",
+    "expected_evidence": "Prostate cancer that is ISUP grade group 2 or more.",
+    "expected_answer_keywords": [
+      "ISUP grade group 2 or more"
+    ]
+  },
+  {
+    "id": 137,
+    "type": "Paraphrased",
+    "question": "What is the suggested approach if a man's life expectancy is less than 7 years?",
+    "expected_pages": [
+      30,
+      31
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "PSA testing should cease when life expectancy is limited (7 years or less) or when comorbidities make prostate cancer treatment unlikely to improve quality or length of life.",
+    "expected_answer_keywords": [
+      "cease",
+      "testing is not recommended"
+    ]
+  },
+  {
+    "id": 138,
+    "type": "Paraphrased",
+    "question": "Are biological variations a reason for fluctuating PSA levels?",
+    "expected_pages": [
+      83
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "Yes, biological variation: PSA levels for an individual can fluctuate over time and may increase transiently following sexual activity.",
+    "expected_answer_keywords": [
+      "Yes",
+      "fluctuate",
+      "sexual activity"
+    ]
+  },
+  {
+    "id": 139,
+    "type": "Paraphrased",
+    "question": "In terms of geography, where are PSA testing rates typically lower in Australia?",
+    "expected_pages": [
+      193
+    ],
+    "expected_section": "Appendix 3: Literature reviews",
+    "expected_evidence": "In rural and remote areas, the rate of PSA testing has consistently been lower than in urban areas.",
+    "expected_answer_keywords": [
+      "rural",
+      "remote"
+    ]
+  },
+  {
+    "id": 140,
+    "type": "Paraphrased",
+    "question": "Why is the transperineal approach preferred over the transrectal route for prostate biopsies?",
+    "expected_pages": [
+      140
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "It is preferred as there is less risk of post-biopsy infection. In addition, ultrasound images in the axial plane facilitate more accurate target biopsies.",
+    "expected_answer_keywords": [
+      "less risk",
+      "infection",
+      "accurate target biopsies"
+    ]
+  },
+  {
+    "id": 141,
+    "type": "Paraphrased",
+    "question": "What are some common barriers to health care access for Aboriginal and Torres Strait Islander men?",
+    "expected_pages": [
+      199
+    ],
+    "expected_section": "Appendix 3: Literature reviews",
+    "expected_evidence": "Barriers include culturally inappropriate services, lack of awareness, lack of knowledge, shame, and logistical difficulties such as transportation.",
+    "expected_answer_keywords": [
+      "culturally inappropriate",
+      "awareness",
+      "shame",
+      "logistical difficulties"
+    ]
+  },
+  {
+    "id": 142,
+    "type": "Paraphrased",
+    "question": "How do the NCCN guidelines recommend managing healthy individuals older than 75 who have never been tested?",
+    "expected_pages": [
+      204
+    ],
+    "expected_section": "APPENDIX 4: Comparison of selected international guidelines",
+    "expected_evidence": "Testing after 75 years of age should be done only in very healthy people with little or no comorbidity to detect aggressive cancers.",
+    "expected_answer_keywords": [
+      "very healthy",
+      "little or no comorbidity",
+      "aggressive cancers"
+    ]
+  },
+  {
+    "id": 143,
+    "type": "Paraphrased",
+    "question": "What does a Gleason score of 9 or 10 indicate about prostate cancer risk?",
+    "expected_pages": [
+      213
+    ],
+    "expected_section": "APPENDIX 6: Glossary of terms",
+    "expected_evidence": "The highest risk: the cancer can be fast growing and most likely to spread.",
+    "expected_answer_keywords": [
+      "highest risk",
+      "fast growing",
+      "most likely to spread"
+    ]
+  },
+  {
+    "id": 144,
+    "type": "Paraphrased",
+    "question": "Why is it important to use shared decision making before ordering a PSA test?",
+    "expected_pages": [
+      28
+    ],
+    "expected_section": "Section B: Decision support",
+    "expected_evidence": "Informed discussion of the possible benefits and harms of PSA testing with shared decision making and patient choice is key to good clinical practice.",
+    "expected_answer_keywords": [
+      "benefits and harms",
+      "patient choice",
+      "good clinical practice"
+    ]
+  },
+  {
+    "id": 145,
+    "type": "Paraphrased",
+    "question": "Do migrant groups in Australia generally experience a higher or lower risk of prostate cancer diagnosis?",
+    "expected_pages": [
+      194
+    ],
+    "expected_section": "Appendix 3: Literature reviews",
+    "expected_evidence": "Migrant groups have traditionally experienced a lower risk of diagnosis of prostate cancer than Australian born residents.",
+    "expected_answer_keywords": [
+      "lower risk",
+      "Australian born"
+    ]
+  },
+  {
+    "id": 146,
+    "type": "Paraphrased",
+    "question": "If a patient has a PI-RADS 4 or 5 lesion, is it sufficient to only perform targeted biopsies?",
+    "expected_pages": [
+      128
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "We suggest that for patients with a PI-RADS 4-5 lesion, mpMRI targeted plus systematic biopsies should be undertaken.",
+    "expected_answer_keywords": [
+      "No",
+      "targeted plus systematic"
+    ]
+  },
+  {
+    "id": 147,
+    "type": "Paraphrased",
+    "question": "What is the recommended strategy regarding PSA testing for men of Black sub-Saharan African ancestry?",
+    "expected_pages": [
+      191
+    ],
+    "expected_section": "Appendix 3: Literature reviews",
+    "expected_evidence": "They should consider beginning shared decision making about PSA testing and re-testing every two years from age 40-69.",
+    "expected_answer_keywords": [
+      "shared decision making",
+      "every two years",
+      "age 40-69"
+    ]
+  },
+  {
+    "id": 148,
+    "type": "Paraphrased",
+    "question": "Does the AUA guideline support offering a baseline PSA test to people between 45 and 50 years?",
+    "expected_pages": [
+      201
+    ],
+    "expected_section": "APPENDIX 4: Comparison of selected international guidelines",
+    "expected_evidence": "Recommendation 4: Clinicians may begin prostate cancer screening and offer a baseline PSA test to people between ages 45 to 50 years.",
+    "expected_answer_keywords": [
+      "Yes",
+      "conditional recommendation"
+    ]
+  },
+  {
+    "id": 149,
+    "type": "Paraphrased",
+    "question": "What is the TNM staging system used for?",
+    "expected_pages": [
+      213
+    ],
+    "expected_section": "APPENDIX 6: Glossary of terms",
+    "expected_evidence": "It is the standard international system for determining your cancer stage made up of tumour stage, node stage, and metastasis stage.",
+    "expected_answer_keywords": [
+      "cancer stage",
+      "tumour",
+      "node",
+      "metastasis"
+    ]
+  },
+  {
+    "id": 150,
+    "type": "Paraphrased",
+    "question": "Are Aboriginal and Torres Strait Islander males recommended to follow a different PSA testing schedule than the general population?",
+    "expected_pages": [
+      97
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "PSA testing recommendations for Aboriginal and Torres Strait Islander males are the same as for the general population.",
+    "expected_answer_keywords": [
+      "No",
+      "same as general population"
+    ]
+  },
+  {
+    "id": 151,
+    "type": "Abbreviation",
+    "question": "What does AIHW stand for?",
+    "expected_pages": [
+      198
+    ],
+    "expected_section": "Appendix 3: Literature reviews",
+    "expected_evidence": "Australian Institute of Health and Welfare (AIHW).",
+    "expected_answer_keywords": [
+      "Australian Institute of Health and Welfare"
+    ]
+  },
+  {
+    "id": 152,
+    "type": "Abbreviation",
+    "question": "What does RACGP stand for?",
+    "expected_pages": [
+      206
+    ],
+    "expected_section": "APPENDIX 5: Organisations approached for endorsement",
+    "expected_evidence": "Royal Australian College of General Practitioners (RACGP)",
+    "expected_answer_keywords": [
+      "Royal Australian College of General Practitioners"
+    ]
+  },
+  {
+    "id": 153,
+    "type": "Abbreviation",
+    "question": "What does CALD stand for?",
+    "expected_pages": [
+      195
+    ],
+    "expected_section": "Appendix 3: Literature reviews",
+    "expected_evidence": "Culturally and linguistically diverse (CALD)",
+    "expected_answer_keywords": [
+      "Culturally and linguistically diverse"
+    ]
+  },
+  {
+    "id": 154,
+    "type": "Abbreviation",
+    "question": "What does EAU stand for?",
+    "expected_pages": [
+      201
+    ],
+    "expected_section": "APPENDIX 4: Comparison of selected international guidelines",
+    "expected_evidence": "European Association of Urology Guidelines",
+    "expected_answer_keywords": [
+      "European Association of Urology"
+    ]
+  },
+  {
+    "id": 155,
+    "type": "Abbreviation",
+    "question": "What does AUA stand for?",
+    "expected_pages": [
+      201
+    ],
+    "expected_section": "APPENDIX 4: Comparison of selected international guidelines",
+    "expected_evidence": "American Urological Association Guidelines",
+    "expected_answer_keywords": [
+      "American Urological Association"
+    ]
+  },
+  {
+    "id": 156,
+    "type": "Abbreviation",
+    "question": "What does NCCN stand for?",
+    "expected_pages": [
+      201
+    ],
+    "expected_section": "APPENDIX 4: Comparison of selected international guidelines",
+    "expected_evidence": "National Comprehensive Cancer Network Guidelines",
+    "expected_answer_keywords": [
+      "National Comprehensive Cancer Network"
+    ]
+  },
+  {
+    "id": 157,
+    "type": "Abbreviation",
+    "question": "What does SEIFA stand for?",
+    "expected_pages": [
+      193,
+      198
+    ],
+    "expected_section": "Appendix 3: Literature reviews",
+    "expected_evidence": "Socio-Economic Indexes for Areas (SEIFA)",
+    "expected_answer_keywords": [
+      "Socio-Economic Indexes for Areas"
+    ]
+  },
+  {
+    "id": 158,
+    "type": "Abbreviation",
+    "question": "What does NACCHO stand for?",
+    "expected_pages": [
+      200
+    ],
+    "expected_section": "Appendix 3: Literature reviews",
+    "expected_evidence": "National Aboriginal Community Controlled Health Organisation (NACCHO)",
+    "expected_answer_keywords": [
+      "National Aboriginal Community Controlled Health Organisation"
+    ]
+  },
+  {
+    "id": 159,
+    "type": "Abbreviation",
+    "question": "What does NDIS stand for?",
+    "expected_pages": [
+      196
+    ],
+    "expected_section": "Appendix 3: Literature reviews",
+    "expected_evidence": "National Disability Insurance Scheme (NDIS)",
+    "expected_answer_keywords": [
+      "National Disability Insurance Scheme"
+    ]
+  },
+  {
+    "id": 160,
+    "type": "Abbreviation",
+    "question": "What does PCFA stand for?",
+    "expected_pages": [
+      177
+    ],
+    "expected_section": "APPENDIX 1: Governance structure",
+    "expected_evidence": "Prostate Cancer Foundation of Australia",
+    "expected_answer_keywords": [
+      "Prostate Cancer Foundation of Australia"
+    ]
+  },
+  {
+    "id": 161,
+    "type": "Abbreviation",
+    "question": "What does MSOAP stand for?",
+    "expected_pages": [
+      74,
+      199
+    ],
+    "expected_section": "Section C: Priority populations",
+    "expected_evidence": "Medical Specialist Outreach Assistance Program (MSOAP)",
+    "expected_answer_keywords": [
+      "Medical Specialist Outreach Assistance Program"
+    ]
+  },
+  {
+    "id": 162,
+    "type": "Abbreviation",
+    "question": "What does NLHC stand for?",
+    "expected_pages": [
+      197
+    ],
+    "expected_section": "Appendix 3: Literature reviews",
+    "expected_evidence": "Non-Liability Health Care (NLHC) program",
+    "expected_answer_keywords": [
+      "Non-Liability Health Care"
+    ]
+  },
+  {
+    "id": 163,
+    "type": "Abbreviation",
+    "question": "What does TNM stand for?",
+    "expected_pages": [
+      213
+    ],
+    "expected_section": "APPENDIX 6: Glossary of terms",
+    "expected_evidence": "Tumour, Node, Metastasis (TNM staging)",
+    "expected_answer_keywords": [
+      "Tumour",
+      "Node",
+      "Metastasis"
+    ]
+  },
+  {
+    "id": 164,
+    "type": "Abbreviation",
+    "question": "What does TRUS stand for?",
+    "expected_pages": [
+      212
+    ],
+    "expected_section": "APPENDIX 6: Glossary of terms",
+    "expected_evidence": "Trans-rectal ultrasound (TRUS)",
+    "expected_answer_keywords": [
+      "Trans-rectal ultrasound"
+    ]
+  },
+  {
+    "id": 165,
+    "type": "Abbreviation",
+    "question": "What does ADT stand for?",
+    "expected_pages": [
+      209
+    ],
+    "expected_section": "APPENDIX 6: Glossary of terms",
+    "expected_evidence": "Androgen deprivation therapy (ADT)",
+    "expected_answer_keywords": [
+      "Androgen deprivation therapy"
+    ]
+  },
+  {
+    "id": 166,
+    "type": "Abbreviation",
+    "question": "What does HR stand for?",
+    "expected_pages": [
+      210
+    ],
+    "expected_section": "APPENDIX 6: Glossary of terms",
+    "expected_evidence": "Hazard ratio (HR)",
+    "expected_answer_keywords": [
+      "Hazard ratio"
+    ]
+  },
+  {
+    "id": 167,
+    "type": "Abbreviation",
+    "question": "What does CI stand for in statistical context?",
+    "expected_pages": [
+      209
+    ],
+    "expected_section": "APPENDIX 6: Glossary of terms",
+    "expected_evidence": "Confidence interval (CI)",
+    "expected_answer_keywords": [
+      "Confidence interval"
+    ]
+  },
+  {
+    "id": 168,
+    "type": "Abbreviation",
+    "question": "What does USANZ stand for?",
+    "expected_pages": [
+      206
+    ],
+    "expected_section": "APPENDIX 5: Organisations approached",
+    "expected_evidence": "Urological Society of Australia and New Zealand (USANZ)",
+    "expected_answer_keywords": [
+      "Urological Society of Australia and New Zealand"
+    ]
+  },
+  {
+    "id": 169,
+    "type": "Abbreviation",
+    "question": "What does RCPA stand for?",
+    "expected_pages": [
+      206
+    ],
+    "expected_section": "APPENDIX 5: Organisations approached",
+    "expected_evidence": "Royal College of Pathologists of Australia (RCPA)",
+    "expected_answer_keywords": [
+      "Royal College of Pathologists of Australia"
+    ]
+  },
+  {
+    "id": 170,
+    "type": "Abbreviation",
+    "question": "What does RANZCR stand for?",
+    "expected_pages": [
+      206
+    ],
+    "expected_section": "APPENDIX 5: Organisations approached",
+    "expected_evidence": "Royal Australian and New Zealand College of Radiologists (RANZCR)",
+    "expected_answer_keywords": [
+      "Royal Australian and New Zealand College of Radiologists"
+    ]
+  },
+  {
+    "id": 171,
+    "type": "Threshold",
+    "question": "At what age does the guideline suggest that discussion about prostate cancer risk should begin for a man with a BRCA2 mutation?",
+    "expected_pages": [
+      29
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "For males aged 45 to 49 years, assess whether they are at higher risk... BRCA2 mutation.",
+    "expected_answer_keywords": [
+      "45"
+    ]
+  },
+  {
+    "id": 172,
+    "type": "Threshold",
+    "question": "What is the MCID for hospitalisation within 30 days of biopsy?",
+    "expected_pages": [
+      214
+    ],
+    "expected_section": "APPENDIX 6: Glossary of terms",
+    "expected_evidence": "Hospitalisation within 30 days of biopsy: MCID 50/1000",
+    "expected_answer_keywords": [
+      "50/1000",
+      "50 per 1000"
+    ]
+  },
+  {
+    "id": 173,
+    "type": "Threshold",
+    "question": "What is the threshold for a moderate effect when calculating MCIDs?",
+    "expected_pages": [
+      214
+    ],
+    "expected_section": "APPENDIX 6: Glossary of terms",
+    "expected_evidence": "The threshold for a moderate effect would be double the MCID",
+    "expected_answer_keywords": [
+      "double the MCID",
+      "2x MCID"
+    ]
+  },
+  {
+    "id": 174,
+    "type": "Threshold",
+    "question": "At what age does the EAU guideline suggest offering early PSA testing to males of African descent?",
+    "expected_pages": [
+      202
+    ],
+    "expected_section": "APPENDIX 4: Comparison of selected international guidelines",
+    "expected_evidence": "males of African descent from 45 years of age",
+    "expected_answer_keywords": [
+      "45 years"
+    ]
+  },
+  {
+    "id": 175,
+    "type": "Threshold",
+    "question": "What is the 5-year crude survival rate for Aboriginal and Torres Strait Islander males with prostate cancer between 2014-2018?",
+    "expected_pages": [
+      198
+    ],
+    "expected_section": "Appendix 3: Literature reviews",
+    "expected_evidence": "The national 5-year crude survival rate (2014-2018) was 77% for Aboriginal and Torres Strait Islander males",
+    "expected_answer_keywords": [
+      "77%"
+    ]
+  },
+  {
+    "id": 176,
+    "type": "Threshold",
+    "question": "What percentage of Australian men diagnosed with low-risk prostate cancer chose active surveillance in 2021?",
+    "expected_pages": [
+      141
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "80% (1,646/2,070) of men with low-risk prostate cancer chose active surveillance in 2021",
+    "expected_answer_keywords": [
+      "80%"
+    ]
+  },
+  {
+    "id": 177,
+    "type": "Threshold",
+    "question": "How much did the age-standardised incidence rate of prostate cancer increase from 1982 to 2009?",
+    "expected_pages": [
+      193
+    ],
+    "expected_section": "Appendix 3: Literature reviews",
+    "expected_evidence": "reflecting a 144% rise between 1982 and 2009",
+    "expected_answer_keywords": [
+      "144%"
+    ]
+  },
+  {
+    "id": 178,
+    "type": "Threshold",
+    "question": "What percentage of men who underwent prostatectomy within 12 months in the ProtecT trial had pT3 or pT4 disease?",
+    "expected_pages": [
+      144,
+      156
+    ],
+    "expected_section": "Section E: Management",
+    "expected_evidence": "29% of those who underwent prostatectomy within 12 months of randomisation had pT3 or pT4 disease",
+    "expected_answer_keywords": [
+      "29%"
+    ]
+  },
+  {
+    "id": 179,
+    "type": "Threshold",
+    "question": "In the ERSPC Rotterdam study, what follow-up duration showed a clinically important moderate decrease in metastatic cases?",
+    "expected_pages": [
+      93
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "results in a clinically important (moderate) decrease in metastases at diagnosis or on progression at 21 years",
+    "expected_answer_keywords": [
+      "21 years"
+    ]
+  },
+  {
+    "id": 180,
+    "type": "Threshold",
+    "question": "According to PCOR-ANZ, what percentage of men undergo transperineal biopsy instead of transrectal biopsy?",
+    "expected_pages": [
+      84
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "64% of men undergo transperineal biopsy",
+    "expected_answer_keywords": [
+      "64%"
+    ]
+  },
+  {
+    "id": 181,
+    "type": "Threshold",
+    "question": "How many diagnostic MRI scans were funded in Australia in 2024 for investigating elevated PSA > 3.0 \u03bcg/L?",
+    "expected_pages": [
+      87
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "there were 52,080 diagnostic MRI scans funded in 2024",
+    "expected_answer_keywords": [
+      "52,080",
+      "52080"
+    ]
+  },
+  {
+    "id": 182,
+    "type": "Threshold",
+    "question": "What is the MCID for undetected ISUP grade 1 with close follow-up?",
+    "expected_pages": [
+      214
+    ],
+    "expected_section": "APPENDIX 6: Glossary of terms",
+    "expected_evidence": "Undetected ISUP grade 1 with close follow-up... MCID: 100/1000",
+    "expected_answer_keywords": [
+      "100/1000"
+    ]
+  },
+  {
+    "id": 183,
+    "type": "Threshold",
+    "question": "What is the PSA threshold recommended for repeating testing in men aged 45-49 at higher risk?",
+    "expected_pages": [
+      97
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "if total PSA is 1.0 \u03bcg/L or greater repeat the test within 1-3 months",
+    "expected_answer_keywords": [
+      "1.0",
+      "1.0 \u03bcg/L"
+    ]
+  },
+  {
+    "id": 184,
+    "type": "Threshold",
+    "question": "What is the MCID for metastatic/advanced disease/palliative therapy at 15 years follow-up in screening populations?",
+    "expected_pages": [
+      215
+    ],
+    "expected_section": "APPENDIX 6: Glossary of terms",
+    "expected_evidence": "30/10000 screening populations",
+    "expected_answer_keywords": [
+      "30/10000",
+      "30 per 10000"
+    ]
+  },
+  {
+    "id": 185,
+    "type": "Threshold",
+    "question": "For men aged 50-69 at higher risk, what PSA value triggers a repeat test?",
+    "expected_pages": [
+      30,
+      97
+    ],
+    "expected_section": "Section D: Early detection",
+    "expected_evidence": "if total PSA is 2.0 \u03bcg/L or greater repeat the test within 1-3 months",
+    "expected_answer_keywords": [
+      "2.0",
+      "2.0 \u03bcg/L"
+    ]
+  },
+  {
+    "id": 186,
+    "type": "Threshold",
+    "question": "According to the US Prostate Cancer Foundation, at what age should Black men who elect screening have a baseline PSA test?",
+    "expected_pages": [
+      190
+    ],
+    "expected_section": "Appendix 3: Literature reviews",
+    "expected_evidence": "a baseline PSA test should be done between the ages of 40 \u2013 45",
+    "expected_answer_keywords": [
+      "40 - 45",
+      "40-45"
+    ]
+  },
+  {
+    "id": 187,
+    "type": "Threshold",
+    "question": "What is the median age of African migrants residing in Australia?",
+    "expected_pages": [
+      191
+    ],
+    "expected_section": "Appendix 3: Literature reviews",
+    "expected_evidence": "The median age of African migrants residing in Australia is 43",
+    "expected_answer_keywords": [
+      "43",
+      "43 years"
+    ]
+  },
+  {
+    "id": 188,
+    "type": "Threshold",
+    "question": "According to the 2018\u201319 NATSIHS, what percentage of Aboriginal and Torres Strait Islander males aged 50 and over reported being tested for prostate cancer at least once?",
+    "expected_pages": [
+      198
+    ],
+    "expected_section": "Appendix 3: Literature reviews",
+    "expected_evidence": "58% (36,600) of Aboriginal and Torres Strait Islander males aged 50 and over reported having been tested",
+    "expected_answer_keywords": [
+      "58%"
+    ]
+  },
+  {
+    "id": 189,
+    "type": "Threshold",
+    "question": "How many times higher is the population level incidence rate of prostate cancer for men of Black African ancestry in the USA compared to White males?",
+    "expected_pages": [
+      189
+    ],
+    "expected_section": "Appendix 3: Literature reviews",
+    "expected_evidence": "approximately 1.8 times higher population level incidence rates compared with White males",
+    "expected_answer_keywords": [
+      "1.8",
+      "1.8 times"
+    ]
+  },
+  {
+    "id": 190,
+    "type": "Threshold",
+    "question": "What is the recommended minimum life expectancy to offer PSA testing according to the EAU guideline?",
+    "expected_pages": [
+      205
+    ],
+    "expected_section": "APPENDIX 4: Comparison of selected international guidelines",
+    "expected_evidence": "Males who have a life-expectancy of less than 15 years are unlikely to benefit.",
+    "expected_answer_keywords": [
+      "15 years"
+    ]
+  },
+  {
+    "id": 191,
+    "type": "Out-of-scope",
+    "question": "What is the recommended treatment for melanoma?",
+    "expected_pages": [],
+    "expected_section": "",
+    "expected_evidence": "No evidence expected in the prostate guideline.",
+    "expected_answer_keywords": []
+  },
+  {
+    "id": 192,
+    "type": "Out-of-scope",
+    "question": "What are the diagnostic criteria for multiple sclerosis?",
+    "expected_pages": [],
+    "expected_section": "",
+    "expected_evidence": "No evidence expected in the prostate guideline.",
+    "expected_answer_keywords": []
+  },
+  {
+    "id": 193,
+    "type": "Out-of-scope",
+    "question": "What is the recommended screening interval for cervical cancer?",
+    "expected_pages": [],
+    "expected_section": "",
+    "expected_evidence": "No evidence expected in the prostate guideline.",
+    "expected_answer_keywords": []
+  },
+  {
+    "id": 194,
+    "type": "Out-of-scope",
+    "question": "What medications are recommended for chronic heart failure?",
+    "expected_pages": [],
+    "expected_section": "",
+    "expected_evidence": "No evidence expected in the prostate guideline.",
+    "expected_answer_keywords": []
+  },
+  {
+    "id": 195,
+    "type": "Out-of-scope",
+    "question": "What are the risk factors for developing pancreatic cancer?",
+    "expected_pages": [],
+    "expected_section": "",
+    "expected_evidence": "No evidence expected in the prostate guideline.",
+    "expected_answer_keywords": []
+  },
+  {
+    "id": 196,
+    "type": "Out-of-scope",
+    "question": "What is the standard management for osteoporosis in postmenopausal women?",
+    "expected_pages": [],
+    "expected_section": "",
+    "expected_evidence": "No evidence expected in the prostate guideline.",
+    "expected_answer_keywords": []
+  },
+  {
+    "id": 197,
+    "type": "Out-of-scope",
+    "question": "How is Parkinson's disease diagnosed?",
+    "expected_pages": [],
+    "expected_section": "",
+    "expected_evidence": "No evidence expected in the prostate guideline.",
+    "expected_answer_keywords": []
+  },
+  {
+    "id": 198,
+    "type": "Out-of-scope",
+    "question": "What are the primary treatments for acute lymphoblastic leukemia?",
+    "expected_pages": [],
+    "expected_section": "",
+    "expected_evidence": "No evidence expected in the prostate guideline.",
+    "expected_answer_keywords": []
+  },
+  {
+    "id": 199,
+    "type": "Out-of-scope",
+    "question": "What is the recommended diet for managing celiac disease?",
+    "expected_pages": [],
+    "expected_section": "",
+    "expected_evidence": "No evidence expected in the prostate guideline.",
+    "expected_answer_keywords": []
+  },
+  {
+    "id": 200,
+    "type": "Out-of-scope",
+    "question": "What surgical options are available for treating cataracts?",
+    "expected_pages": [],
+    "expected_section": "",
+    "expected_evidence": "No evidence expected in the prostate guideline.",
+    "expected_answer_keywords": []
+  }
+]
