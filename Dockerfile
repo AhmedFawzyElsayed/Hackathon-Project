@@ -25,6 +25,9 @@ RUN pip install --no-cache-dir -r backend/requirements.txt
 # hitting Hugging Face at runtime (avoids network/rate-limit failures on boot).
 RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('BAAI/bge-m3')"
 RUN python -c "from sentence_transformers import CrossEncoder; CrossEncoder('ncbi/MedCPT-Cross-Encoder')"
+# Second model: the MiniLM fallback reranker, so a MedCPT load failure still
+# leaves a working (degraded) reranking path without any network access.
+RUN python -c "from sentence_transformers import CrossEncoder; CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')"
 
 COPY rag_core/ rag_core/
 COPY backend/app/ backend/app/
