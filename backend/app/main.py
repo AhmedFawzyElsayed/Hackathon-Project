@@ -20,14 +20,15 @@ from rag_core import load_index
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Load the persisted index once at startup — never per-request. If
+    # Load the persisted index once at startup �?" never per-request. If
     # index_store/ doesn't exist yet, log it and let requests fail with a
     # clear 503 rather than crashing the whole app on boot.
     try:
+        print("Loading rag_core index (BGE-M3 embedder) ...", flush=True)
         load_index()
-        print("rag_core index loaded.")
+        print("rag_core index loaded.", flush=True)
     except FileNotFoundError as e:
-        print(f"WARNING: {e}")
+        print(f"WARNING: {e}", flush=True)
     yield
 
 

@@ -46,5 +46,10 @@ COPY index_store/ index_store/
 # Built UI
 COPY --from=frontend /app/frontend/dist frontend/dist
 
+# Runtime: all models are already in the build cache, so force offline mode to
+# avoid network hangs/timeouts on boot. (Set AFTER the model pre-download RUNs,
+# which need the network.)
+ENV HF_HUB_OFFLINE=1
+
 EXPOSE 8000
 CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
