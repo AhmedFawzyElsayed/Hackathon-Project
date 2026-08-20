@@ -1,6 +1,8 @@
 import type { AskResponse } from "../types/chat";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000";
+// Same-origin by default (single-container deploys: the backend serves the UI).
+// Local dev: set VITE_API_BASE_URL=http://localhost:8000 in frontend/.env.
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "";
 
 let currentConversationId: string | null = null;
 

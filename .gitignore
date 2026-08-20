@@ -18,6 +18,9 @@ frontend/.env
 index_store/
 index_store_old_*/
 
+# --- Conversation memory (user chat data, not source) -------------------------
+index_store/conversation_memory.json
+
 # --- TypeScript build info ----------------------------------------------------
 *.tsbuildinfo
 

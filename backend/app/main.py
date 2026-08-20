@@ -10,6 +10,8 @@ if _PROJECT_ROOT not in sys.path:
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 
 from app.api.routes.chat import router as chat_router
 from app.core.config import settings
@@ -40,3 +42,16 @@ app.add_middleware(
 )
 
 app.include_router(chat_router)
+
+# Serve the built React frontend (if present) so a single container can run
+# both the API and the UI. Mounted last so /health and /ask take precedence.
+_FRONTEND_DIST = Path(__file__).resolve().parent.parent.parent / "frontend" / "dist"
+if _FRONTEND_DIST.exists() and (_FRONTEND_DIST / "index.html").exists():
+    app.mount("/assets", StaticFiles(directory=_FRONTEND_DIST / "assets"), name="assets")
+
+    @app.get("/{full_path:path}")
+    def spa(full_path: str):
+        target = _FRONTEND_DIST / full_path
+        if full_path and target.is_file():
+            return FileResponse(target)
+        return FileResponse(_FRONTEND_DIST / "index.html")
