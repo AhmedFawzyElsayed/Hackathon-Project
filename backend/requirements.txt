@@ -1,8 +1,9 @@
-# Install the root requirements.txt first (rag_core's dependencies), then this:
-fastapi
-uvicorn[standard]
-pydantic
-pydantic-settings
-python-dotenv
-pytest
-httpx
+# Install the root requirements.txt first (rag_core's dependencies), then this.
+# Versions match the pinned backend environment used locally.
+fastapi==0.141.1
+uvicorn[standard]==0.52.4
+pydantic==2.13.4
+pydantic-settings==2.15.0
+python-dotenv==1.2.3
+pytest==9.1.1
+httpx==0.28.1

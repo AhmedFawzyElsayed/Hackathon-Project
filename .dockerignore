@@ -10,3 +10,9 @@ frontend/dist
 .env.example
 index_store_old_*
 .pytest_cache
+*.tsbuildinfo
+_inspect*.py
+eval_questions.json
+run_chunking_comparison.py
+chunking_experiment_results.csv
+DEMO.md

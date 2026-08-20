@@ -1,17 +1,20 @@
 # Dependencies for rag_core/ and the notebook. Install this first, then
 # backend/requirements.txt for the API layer.
-langchain-community
-langchain-text-splitters
-langchain-chroma
-langchain-core
-chromadb
-pypdf
-scikit-learn
-pandas
-numpy
-rank_bm25
-groq
-sentence-transformers
-torch
-transformers
-python-dotenv
+#
+# torch is intentionally NOT listed here: the deploy Dockerfile installs the
+# CPU wheel explicitly (see Dockerfile). For local use, install a torch build
+# that matches your machine (CUDA or CPU) before installing this file.
+langchain-community==0.4.2
+langchain-text-splitters==1.1.2
+langchain-chroma==1.1.0
+langchain-core==1.5.6
+chromadb==1.5.9
+pypdf==6.16.1
+scikit-learn==1.9.0
+pandas==3.0.5
+numpy==2.5.2
+rank-bm25==0.2.2
+groq==1.6.0
+sentence-transformers==6.0.0
+transformers==5.15.0
+python-dotenv==1.2.3
