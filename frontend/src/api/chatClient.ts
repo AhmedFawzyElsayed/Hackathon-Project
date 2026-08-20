@@ -32,8 +32,9 @@ export function listStoredConversations(): StoredConversation[] {
 
 export function saveStoredConversation(conv: StoredConversation): void {
   const all = listStoredConversations().filter((c) => c.id !== conv.id);
-  all.unshift(conv);
-  localStorage.setItem(CHATS_KEY, JSON.stringify(all.slice(0, 50)));
+  // Append so conversations keep their place in the list (no reordering).
+  all.push(conv);
+  localStorage.setItem(CHATS_KEY, JSON.stringify(all.slice(-50)));
 }
 
 export function getStoredTurns(id: string): { question: string; result: AskResponse | null }[] {
@@ -46,6 +47,12 @@ export function getStoredTurns(id: string): { question: string; result: AskRespo
 
 export function saveStoredTurns(id: string, turns: { question: string; result: AskResponse | null }[]): void {
   localStorage.setItem(`bytecode_chat_turns_${id}`, JSON.stringify(turns));
+}
+
+export function deleteStoredConversation(id: string): void {
+  const all = listStoredConversations().filter((c) => c.id !== id);
+  localStorage.setItem(CHATS_KEY, JSON.stringify(all));
+  localStorage.removeItem(`bytecode_chat_turns_${id}`);
 }
 
 export function setConversationId(id: string | null): void {

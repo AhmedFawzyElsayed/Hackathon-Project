@@ -4,6 +4,7 @@ import "./App.css";
 import {
   ApiError,
   askQuestion,
+  deleteStoredConversation,
   getStoredTurns,
   listStoredConversations,
   saveStoredConversation,
@@ -61,6 +62,7 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [savedChats, setSavedChats] = useState(listStoredConversations());
+  const [currentConvId, setCurrentConvId] = useState<string | null>(null);
 
   function persistConversation(convId: string, current: Turn[]) {
     const stored = toStoredTurns(current);
@@ -68,6 +70,7 @@ export default function App() {
     const title = current.find((t) => t.result)?.question ?? current[0]?.question ?? "Untitled chat";
     saveStoredConversation({ id: convId, title, createdAt: Date.now() });
     setSavedChats(listStoredConversations());
+    setCurrentConvId(convId);
   }
 
   async function handleAsk(question: string) {
@@ -92,13 +95,14 @@ export default function App() {
 
   function handleNewConversation() {
     // Persist the current chat before starting a fresh one.
-    const convId = getStoredConversationId();
+    const convId = currentConvId;
     if (convId && turns.length > 0) {
       persistConversation(convId, turns);
     }
     resetConversation();
     setTurns([]);
     setInputValue("");
+    setCurrentConvId(null);
   }
 
   function handleLoadConversation(convId: string) {
@@ -106,20 +110,23 @@ export default function App() {
     setConversationId(convId);
     setTurns(stored.map((t, i) => ({ id: Date.now() + i, question: t.question, result: t.result, error: t.error })));
     setInputValue("");
+    setCurrentConvId(convId);
   }
 
-  function getStoredConversationId(): string | null {
-    // The last saved conversation id is the one currently in flight.
-    const all = listStoredConversations();
-    return all[0]?.id ?? null;
+  function handleDeleteChat(convId: string) {
+    deleteStoredConversation(convId);
+    setSavedChats(listStoredConversations());
+    if (convId === currentConvId) {
+      resetConversation();
+      setTurns([]);
+      setCurrentConvId(null);
+    }
   }
 
   function handleSuggested(question: string) {
     setInputValue(question);
     handleAsk(question);
   }
-
-  const historyTitle = turns.length > 0 ? turns[0].question : "";
 
   return (
     <div className="app">
@@ -140,17 +147,24 @@ export default function App() {
         <div className="history">
           <p className="history-title">CHAT HISTORY</p>
 
-          {historyTitle && (
-            <div className="chat-item active" onClick={() => handleLoadConversation(getStoredConversationId() ?? "")}>
-              <i className="fa-regular fa-message" />
-              <span>{historyTitle}</span>
-            </div>
-          )}
-
           {savedChats.map((chat) => (
-            <div key={chat.id} className="chat-item" onClick={() => handleLoadConversation(chat.id)}>
+            <div
+              key={chat.id}
+              className={chat.id === currentConvId ? "chat-item active" : "chat-item"}
+              onClick={() => handleLoadConversation(chat.id)}
+            >
               <i className="fa-regular fa-message" />
               <span title={chat.title}>{chat.title.slice(0, 40)}</span>
+              <button
+                className="chat-delete-btn"
+                title="Delete chat"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleDeleteChat(chat.id);
+                }}
+              >
+                <i className="fa-solid fa-trash" />
+              </button>
             </div>
           ))}
         </div>

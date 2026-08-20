@@ -3,5 +3,8 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [react()],
-  server: { port: 5173 },
+  server: {
+    port: 5173,
+    allowedHosts: ["orders-agrees-animated-performance.trycloudflare.com"]
+  }
 });
