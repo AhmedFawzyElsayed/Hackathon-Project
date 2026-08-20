@@ -104,9 +104,11 @@ class MemoryManager:
         session = ConversationSession(session_id=sid)
         self._sessions[sid] = session
         self._evict_stale_sessions()
+        self._persist()
         return session
 
     def _evict_stale_sessions(self) -> None:
+        changed = False
         now = time.time()
         stale = [
             sid
@@ -115,12 +117,16 @@ class MemoryManager:
         ]
         for sid in stale:
             del self._sessions[sid]
+            changed = True
         if len(self._sessions) > self._max_sessions:
             oldest = sorted(
                 self._sessions, key=lambda k: self._sessions[k].created_at
             )[: len(self._sessions) - self._max_sessions]
             for sid in oldest:
                 del self._sessions[sid]
+                changed = True
+        if changed:
+            self._persist()
 
     # -- short-term context ---------------------------------------------------
     def get_short_term_context(self, session_id: str, n: int = 5) -> str:
@@ -171,7 +177,7 @@ class MemoryManager:
             if len(self._facts) > self._max_long_term:
                 self._facts = self._facts[-self._max_long_term:]
             self._rebuild_fact_index()
-            self._persist()
+        self._persist()
 
     def _extract_facts(self, question: str, claims: list[dict]) -> list[LongTermFact]:
         """Extract cited claims as long-term facts."""
@@ -202,14 +208,29 @@ class MemoryManager:
         self._vectorizer = TfidfVectorizer(
             stop_words="english", ngram_range=(1, 2), max_features=5000
         )
-        self._fact_matrix = self._vectorizer.fit_transform(texts)
+        try:
+            self._fact_matrix = self._vectorizer.fit_transform(texts)
+        except ValueError:
+            # e.g. every fact is a stop word or whitespace — nothing to index.
+            self._vectorizer = None
+            self._fact_matrix = None
 
     # -- persistence ----------------------------------------------------------
     def _persist(self) -> None:
         if not self._persist_path:
             return
         self._persist_path.parent.mkdir(parents=True, exist_ok=True)
-        data = [asdict(f) for f in self._facts]
+        data = {
+            "facts": [asdict(f) for f in self._facts],
+            "sessions": [
+                {
+                    "session_id": s.session_id,
+                    "created_at": s.created_at,
+                    "turns": [asdict(t) for t in s.turns],
+                }
+                for s in self._sessions.values()
+            ],
+        }
         with open(self._persist_path, "w") as fh:
             json.dump(data, fh, indent=2)
 
@@ -219,10 +240,26 @@ class MemoryManager:
         try:
             with open(self._persist_path) as fh:
                 data = json.load(fh)
-            self._facts = [LongTermFact(**item) for item in data]
+            # Legacy files (pre-2026-08-20) were a bare list of long-term facts.
+            if isinstance(data, dict):
+                facts = data.get("facts", [])
+                sessions = data.get("sessions", [])
+            else:
+                facts = data
+                sessions = []
+            self._facts = [LongTermFact(**item) for item in facts]
             self._rebuild_fact_index()
+            for s in sessions:
+                session = ConversationSession(
+                    session_id=s.get("session_id"),
+                    created_at=s.get("created_at", time.time()),
+                )
+                for t in s.get("turns", []):
+                    session.add_turn(ConversationTurn(**t))
+                self._sessions[session.session_id] = session
         except Exception:
             self._facts = []
+            self._sessions = {}
 
 
 # ---------------------------------------------------------------------------
