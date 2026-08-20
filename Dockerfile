@@ -21,6 +21,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY backend/requirements.txt backend/requirements.txt
 RUN pip install --no-cache-dir -r backend/requirements.txt
 
+# Pre-download the models at BUILD time so the container starts without
+# hitting Hugging Face at runtime (avoids network/rate-limit failures on boot).
+RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('BAAI/bge-m3')"
+RUN python -c "from sentence_transformers import CrossEncoder; CrossEncoder('ncbi/MedCPT-Cross-Encoder')"
+
 COPY rag_core/ rag_core/
 COPY backend/app/ backend/app/
 COPY backend/tests/ backend/tests/
