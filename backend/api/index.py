@@ -6,6 +6,7 @@ RAM limits). It exists so the frontend static build + API route wiring deploy
 cleanly. Run the real backend on Railway (see Dockerfile / railway.json) and
 point the frontend at it via VITE_API_BASE_URL.
 """
+from backend.main import app
 import sys
 from pathlib import Path
 
