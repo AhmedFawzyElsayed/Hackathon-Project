@@ -401,8 +401,14 @@ def extractive_claims(question: str, evidence: list[dict]):
     claims = []
     for e in ranked:
         clean = clean_chunk_text(e["text"])
-        sentences = [s.strip() for s in re.split(r"(?<=[.!?])\s+|\n+", clean) if s.strip()]
-        best = max(sentences, key=lambda s: len(q_tokens & set(tokenize(s))), default=clean[:200])
+        # Collapse PDF line-wrapping whitespace first so sentences aren't cut
+        # mid-way by \n (e.g. "...on the basis\nof a raised PSA..."), then split
+        # on real sentence boundaries.
+        flat = re.sub(r"\s+", " ", clean)
+        sentences = [s.strip() for s in re.split(r"(?<=[.!?])\s+", flat) if s.strip()]
+        best = max(sentences, key=lambda s: len(q_tokens & set(tokenize(s))), default=flat[:200])
+        # Strip leading section numbering like "6.1 " / "6.1.2 " before the text.
+        best = re.sub(r"^\s*\d+(\.\d+)*[\.\)\s-]*", "", best).strip()
         claims.append({"claim_text": best.strip(), "chunk_id": e["chunk_id"]})
     return claims
 

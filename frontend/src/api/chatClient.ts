@@ -6,12 +6,50 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "";
 
 let currentConversationId: string | null = null;
 
+const CHATS_KEY = "bytecode_chats";
+
+export interface StoredConversation {
+  id: string;
+  title: string;
+  createdAt: number;
+}
+
 export class ApiError extends Error {
   status: number;
   constructor(message: string, status: number) {
     super(message);
     this.status = status;
   }
+}
+
+export function listStoredConversations(): StoredConversation[] {
+  try {
+    return JSON.parse(localStorage.getItem(CHATS_KEY) ?? "[]");
+  } catch {
+    return [];
+  }
+}
+
+export function saveStoredConversation(conv: StoredConversation): void {
+  const all = listStoredConversations().filter((c) => c.id !== conv.id);
+  all.unshift(conv);
+  localStorage.setItem(CHATS_KEY, JSON.stringify(all.slice(0, 50)));
+}
+
+export function getStoredTurns(id: string): { question: string; result: AskResponse | null }[] {
+  try {
+    return JSON.parse(localStorage.getItem(`bytecode_chat_turns_${id}`) ?? "[]");
+  } catch {
+    return [];
+  }
+}
+
+export function saveStoredTurns(id: string, turns: { question: string; result: AskResponse | null }[]): void {
+  localStorage.setItem(`bytecode_chat_turns_${id}`, JSON.stringify(turns));
+}
+
+export function setConversationId(id: string | null): void {
+  currentConversationId = id;
 }
 
 export async function askQuestion(question: string): Promise<AskResponse> {

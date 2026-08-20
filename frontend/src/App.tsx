@@ -1,7 +1,16 @@
 import { useState } from "react";
 
 import "./App.css";
-import { ApiError, askQuestion, resetConversation } from "./api/chatClient";
+import {
+  ApiError,
+  askQuestion,
+  getStoredTurns,
+  listStoredConversations,
+  saveStoredConversation,
+  saveStoredTurns,
+  setConversationId,
+  resetConversation,
+} from "./api/chatClient";
 import AnswerCard from "./components/AnswerCard";
 import ChatInput from "./components/ChatInput";
 import RefusalCard from "./components/RefusalCard";
@@ -14,6 +23,12 @@ interface Turn {
   error: string | null;
 }
 
+interface StoredTurn {
+  question: string;
+  result: AskResponse | null;
+  error: string | null;
+}
+
 const SUGGESTED_QUESTIONS = [
   {
     icon: "fa-solid fa-database",
@@ -21,26 +36,39 @@ const SUGGESTED_QUESTIONS = [
     text: "What does PSAD stand for and why is it used?",
   },
   {
-    icon: "fa-solid fa-chart-column",
+    icon: "fa-solid fa-stethoscope",
     tag: "Question 02",
-    text: "What PSA threshold triggers a repeat test?",
+    text: "For males needing further investigation because of PSA, what is the recommended next diagnostic test?",
   },
   {
-    icon: "fa-solid fa-code",
+    icon: "fa-solid fa-clock",
     tag: "Question 03",
-    text: "What information is available in the guideline?",
+    text: "What PSA testing interval is recommended for males aged 50 to 69 who decide to undergo testing?",
   },
   {
-    icon: "fa-solid fa-lightbulb",
+    icon: "fa-solid fa-chart-column",
     tag: "Question 04",
-    text: "What are the most important insights from the guideline?",
+    text: "What should happen when total PSA is 3.0 micrograms per litre or greater in males aged 50 to 69?",
   },
 ];
+
+function toStoredTurns(turns: Turn[]): StoredTurn[] {
+  return turns.map((t) => ({ question: t.question, result: t.result, error: t.error }));
+}
 
 export default function App() {
   const [turns, setTurns] = useState<Turn[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [inputValue, setInputValue] = useState("");
+  const [savedChats, setSavedChats] = useState(listStoredConversations());
+
+  function persistConversation(convId: string, current: Turn[]) {
+    const stored = toStoredTurns(current);
+    saveStoredTurns(convId, stored);
+    const title = current.find((t) => t.result)?.question ?? current[0]?.question ?? "Untitled chat";
+    saveStoredConversation({ id: convId, title, createdAt: Date.now() });
+    setSavedChats(listStoredConversations());
+  }
 
   async function handleAsk(question: string) {
     const id = Date.now();
@@ -49,7 +77,11 @@ export default function App() {
 
     try {
       const result = await askQuestion(question);
-      setTurns((prev) => prev.map((t) => (t.id === id ? { ...t, result } : t)));
+      setTurns((prev) => {
+        const next = prev.map((t) => (t.id === id ? { ...t, result } : t));
+        persistConversation(result.conversation_id, next);
+        return next;
+      });
     } catch (e) {
       const message = e instanceof ApiError ? e.message : "Couldn't reach the assistant. Is the backend running?";
       setTurns((prev) => prev.map((t) => (t.id === id ? { ...t, error: message } : t)));
@@ -58,15 +90,33 @@ export default function App() {
     }
   }
 
-  function handleSuggested(question: string) {
-    setInputValue(question);
-    handleAsk(question);
-  }
-
   function handleNewConversation() {
+    // Persist the current chat before starting a fresh one.
+    const convId = getStoredConversationId();
+    if (convId && turns.length > 0) {
+      persistConversation(convId, turns);
+    }
     resetConversation();
     setTurns([]);
     setInputValue("");
+  }
+
+  function handleLoadConversation(convId: string) {
+    const stored = getStoredTurns(convId) as StoredTurn[];
+    setConversationId(convId);
+    setTurns(stored.map((t, i) => ({ id: Date.now() + i, question: t.question, result: t.result, error: t.error })));
+    setInputValue("");
+  }
+
+  function getStoredConversationId(): string | null {
+    // The last saved conversation id is the one currently in flight.
+    const all = listStoredConversations();
+    return all[0]?.id ?? null;
+  }
+
+  function handleSuggested(question: string) {
+    setInputValue(question);
+    handleAsk(question);
   }
 
   const historyTitle = turns.length > 0 ? turns[0].question : "";
@@ -91,11 +141,18 @@ export default function App() {
           <p className="history-title">CHAT HISTORY</p>
 
           {historyTitle && (
-            <div className="chat-item active">
+            <div className="chat-item active" onClick={() => handleLoadConversation(getStoredConversationId() ?? "")}>
               <i className="fa-regular fa-message" />
               <span>{historyTitle}</span>
             </div>
           )}
+
+          {savedChats.map((chat) => (
+            <div key={chat.id} className="chat-item" onClick={() => handleLoadConversation(chat.id)}>
+              <i className="fa-regular fa-message" />
+              <span title={chat.title}>{chat.title.slice(0, 40)}</span>
+            </div>
+          ))}
         </div>
 
         <div className="sidebar-footer">
@@ -232,3 +289,4 @@ export default function App() {
     </div>
   );
 }
+

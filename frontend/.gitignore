@@ -1,0 +1,36 @@
+# --- Dependencies -----------------------------------------------------------
+node_modules/
+
+# --- Build output (served by the backend / CDN, never committed) ------------
+dist/
+dist-ssr/
+
+# --- Local environment & secrets ---------------------------------------------
+.env
+.env.*
+!.env.example
+
+# --- TypeScript build info ----------------------------------------------------
+*.tsbuildinfo
+
+# --- Logs ---------------------------------------------------------------------
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Editor / OS ---------------------------------------------------------------
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# --- Vite / misc ---------------------------------------------------------------
+.vite/
